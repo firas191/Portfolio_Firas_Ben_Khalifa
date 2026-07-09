@@ -1,44 +1,36 @@
-# vCard - Personal portfolio
+# Mohamed Firas Ben Khalifa — Personal Portfolio
 
-![GitHub repo size](https://img.shields.io/github/repo-size/codewithsadee/vcard-personal-portfolio)
-![GitHub stars](https://img.shields.io/github/stars/codewithsadee/vcard-personal-portfolio?style=social)
-![GitHub forks](https://img.shields.io/github/forks/codewithsadee/vcard-personal-portfolio?style=social)
-[![Twitter Follow](https://img.shields.io/twitter/follow/codewithsadee_?style=social)](https://twitter.com/intent/follow?screen_name=codewithsadee_)
-[![YouTube Video Views](https://img.shields.io/youtube/views/SoxmIlgf2zM?style=social)](https://youtu.be/SoxmIlgf2zM)
+**Live site:** [firas191.github.io/Portfolio_Mohamed_Firas_Ben_Khalifa](https://firas191.github.io/Portfolio_Mohamed_Firas_Ben_Khalifa/)
 
-vCard is a fully responsive personal portfolio website, responsive for all devices, built using HTML, CSS, and JavaScript.
+Portfolio of a Data Science & AI engineering student at ESPRIT (Tunisia), showcasing AI/ML projects, professional experience and NVIDIA Deep Learning Institute certifications.
 
-## Demo
+## Features
 
-![vCard Desktop Demo](./website-demo-image/desktop.png "Desktop Demo")
-![vCard Mobile Demo](./website-demo-image/mobile.png "Mobile Demo")
+- **Bilingual** — instant English / French toggle, preference saved between visits
+- **Dark & light mode** — theme switcher with a custom-designed light palette
+- **Projects** — filterable by category (Agentic AI, Computer Vision, Machine Learning, Full-Stack), with links to the GitHub repositories
+- **Verifiable certifications** — every NVIDIA DLI certificate card links to its official verification page
+- **Downloadable CV** and a contact form that opens the visitor's mail client (no backend needed)
+- Fully responsive, no frameworks — plain HTML, CSS and vanilla JavaScript
 
-## Prerequisites
+## Highlighted projects
 
-Before you begin, ensure you have met the following requirements:
-
-* [Git](https://git-scm.com/downloads "Download Git") must be installed on your operating system.
-
-## Installing vCard
-
-To install **vCard**, follow these steps:
-
-Linux and macOS:
-
-```bash
-sudo git clone https://github.com/codewithsadee/vcard-personal-portfolio.git
-```
-
-Windows:
-
-```bash
-git clone https://github.com/codewithsadee/vcard-personal-portfolio.git
-```
+| Project | Domain |
+| --- | --- |
+| [SkillBridge AI](https://github.com/firas191/SkillBridge-AI) | Agentic AI recruitment & education copilot |
+| AIGIS *(private)* | Multimodal CNN + RAG assistant for structural diagnosis |
+| AgriSmart *(private)* | Mobile-first smart farming platform with AI agents |
+| [FraudShield](https://github.com/firas191/FraudShield) | Federated learning fraud detection with differential privacy |
+| [InsightFlow AI](https://github.com/firas191/InsightFlow-AI) | Enterprise pulse agent over support tickets |
+| [Mini-Devin](https://github.com/firas191/Mini-Devin) | Autonomous software-engineering agent (SWE-bench Lite) |
+| [Face Emotion Recognition](https://github.com/firas191/Image-Captioning) | Real-time emotion recognition + scene captioning |
 
 ## Contact
 
-If you want to contact me you can reach me at [Twitter](https://www.x.com/codewithsadee_).
+- Email: [firasbenkhellifa@gmail.com](mailto:firasbenkhellifa@gmail.com)
+- LinkedIn: [mohamedfirasbenkhalifa](https://www.linkedin.com/in/mohamedfirasbenkhalifa)
+- GitHub: [firas191](https://github.com/firas191)
 
-## License
+## Credits
 
-MIT
+Built on the [vCard personal portfolio template](https://github.com/codewithsadee/vcard-personal-portfolio) by [codewithsadee](https://github.com/codewithsadee) (MIT license), heavily customized: bilingual i18n system, light theme, certifications page, project cover art and more.

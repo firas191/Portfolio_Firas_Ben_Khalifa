@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2b2130"/>
+      <stop offset="1" stop-color="#161119"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <g stroke="#f48fb1" stroke-opacity="0.08" stroke-width="1">
+    <path d="M0 125 H800 M0 250 H800 M0 375 H800 M200 0 V500 M400 0 V500 M600 0 V500"/>
+  </g>
+  <circle cx="690" cy="90" r="160" fill="#f48fb1" opacity="0.06"/>
+  <g transform="translate(80,110)" stroke="#f48fb1" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="44" cy="44" r="40"/>
+    <circle cx="30" cy="34" r="3" fill="#f48fb1"/>
+    <circle cx="58" cy="34" r="3" fill="#f48fb1"/>
+    <path d="M26 56 c8 10 28 10 36 0"/>
+    <path d="M0 4 h14 M0 4 v14 M88 4 h-14 M88 4 v14 M0 84 h14 M0 84 v-14 M88 84 h-14 M88 84 v-14" opacity="0.5"/>
+    <path d="M116 30 h56 M116 46 h40 M116 62 h48" opacity="0.5"/>
+  </g>
+  <text x="80" y="300" font-family="Poppins, Arial, sans-serif" font-size="52" font-weight="600" fill="#fafafa">Emotion Recognition</text>
+  <text x="80" y="348" font-family="Poppins, Arial, sans-serif" font-size="24" fill="#f48fb1">Real-time facial emotion AI — 87.6% accuracy</text>
+  <text x="80" y="402" font-family="Poppins, Arial, sans-serif" font-size="17" fill="#9f9f9f">EfficientNet-B3 · OpenCV · BLIP Captioning · RAF-DB · Gradio</text>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#26262a"/>
+      <stop offset="1" stop-color="#151517"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <g stroke="#ffdb70" stroke-opacity="0.08" stroke-width="1">
+    <path d="M0 125 H800 M0 250 H800 M0 375 H800 M200 0 V500 M400 0 V500 M600 0 V500"/>
+  </g>
+  <circle cx="700" cy="80" r="160" fill="#ffdb70" opacity="0.06"/>
+  <g transform="translate(80,120)">
+    <circle cx="30" cy="30" r="26" fill="none" stroke="#ffdb70" stroke-width="4"/>
+    <circle cx="160" cy="30" r="26" fill="none" stroke="#ffdb70" stroke-width="4" opacity="0.55"/>
+    <path d="M56 30 H134" stroke="#ffdb70" stroke-width="4" stroke-dasharray="8 8"/>
+    <path d="M22 30 l6 6 12 -14" stroke="#ffdb70" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M152 22 v16 M144 30 h16" stroke="#ffdb70" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <text x="80" y="300" font-family="Poppins, Arial, sans-serif" font-size="56" font-weight="600" fill="#fafafa">SkillBridge AI</text>
+  <text x="80" y="348" font-family="Poppins, Arial, sans-serif" font-size="24" fill="#ffdb70">Agentic recruitment &amp; education copilot</text>
+  <text x="80" y="402" font-family="Poppins, Arial, sans-serif" font-size="17" fill="#9f9f9f">Python · FastAPI · React · TypeScript · LangChain · LLMs</text>
+</svg>

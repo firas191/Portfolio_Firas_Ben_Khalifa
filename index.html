@@ -5,21 +5,17 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>vCard - Personal Portfolio</title>
+  <title>Mohamed Firas Ben Khalifa — Data Science &amp; AI Engineering Student</title>
+  <meta name="description"
+    content="Portfolio of Mohamed Firas Ben Khalifa — Data Science & AI engineering student at ESPRIT. Agentic AI, LLM applications, computer vision and full-stack AI products.">
 
-  <!--
-    - favicon
-  -->
+  <!-- favicon -->
   <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
 
-  <!--
-    - custom css link
-  -->
+  <!-- custom css link -->
   <link rel="stylesheet" href="./assets/css/style.css">
 
-  <!--
-    - google font link
-  -->
+  <!-- google font link -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -27,32 +23,40 @@
 
 <body>
 
-  <!--
-    - #MAIN
-  -->
+  <!-- floating page controls: theme + language -->
+  <div class="page-controls">
+    <button class="control-btn" data-theme-toggle title="Toggle light / dark mode">
+      <ion-icon name="moon-outline" data-theme-icon></ion-icon>
+    </button>
+    <button class="control-btn lang-toggle" data-lang-toggle title="Switch language">
+      <span class="lang-opt active" data-lang-opt="en">EN</span>
+      <span class="lang-sep">·</span>
+      <span class="lang-opt" data-lang-opt="fr">FR</span>
+    </button>
+  </div>
+
+  <!-- #MAIN -->
 
   <main>
 
-    <!--
-      - #SIDEBAR
-    -->
+    <!-- #SIDEBAR -->
 
     <aside class="sidebar" data-sidebar>
 
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="Richard hanrick" width="80">
+          <img src="./Profile%20Picture.jpg" alt="Mohamed Firas Ben Khalifa" width="80">
         </figure>
 
         <div class="info-content">
-          <h1 class="name" title="Richard hanrick">Richard hanrick</h1>
+          <h1 class="name" title="Mohamed Firas Ben Khalifa">Mohamed Firas<br>Ben Khalifa</h1>
 
-          <p class="title">Web developer</p>
+          <p class="title" data-en="Data Science &amp; AI Engineering Student" data-fr="Étudiant en Data Science &amp; Ingénierie IA">Data Science &amp; AI Engineering Student</p>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
+          <span data-en="Show Contacts" data-fr="Voir Contacts">Show Contacts</span>
 
           <ion-icon name="chevron-down"></ion-icon>
         </button>
@@ -74,7 +78,7 @@
             <div class="contact-info">
               <p class="contact-title">Email</p>
 
-              <a href="mailto:richard@example.com" class="contact-link">richard@example.com</a>
+              <a href="mailto:firasbenkhellifa@gmail.com" class="contact-link">firasbenkhellifa@gmail.com</a>
             </div>
 
           </li>
@@ -86,9 +90,9 @@
             </div>
 
             <div class="contact-info">
-              <p class="contact-title">Phone</p>
+              <p class="contact-title" data-en="Phone" data-fr="Téléphone">Phone</p>
 
-              <a href="tel:+12133522795" class="contact-link">+1 (213) 352-2795</a>
+              <a href="tel:+21622175642" class="contact-link">+216 22 175 642</a>
             </div>
 
           </li>
@@ -96,13 +100,13 @@
           <li class="contact-item">
 
             <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
+              <ion-icon name="logo-github"></ion-icon>
             </div>
 
             <div class="contact-info">
-              <p class="contact-title">Birthday</p>
+              <p class="contact-title">GitHub</p>
 
-              <time datetime="1982-06-23">June 23, 1982</time>
+              <a href="https://github.com/firas191" target="_blank" rel="noopener" class="contact-link">github.com/firas191</a>
             </div>
 
           </li>
@@ -110,13 +114,13 @@
           <li class="contact-item">
 
             <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
+              <ion-icon name="logo-linkedin"></ion-icon>
             </div>
 
             <div class="contact-info">
-              <p class="contact-title">Location</p>
+              <p class="contact-title">LinkedIn</p>
 
-              <address>Sacramento, California, USA</address>
+              <a href="https://www.linkedin.com/in/mohamedfirasbenkhalifa" target="_blank" rel="noopener" class="contact-link">mohamedfirasbenkhalifa</a>
             </div>
 
           </li>
@@ -125,23 +129,28 @@
 
         <div class="separator"></div>
 
+        <a href="./Curriculum_Vitae_Mohamed_Firas_Ben_Khalifa.pdf" class="cv-download-btn" download="Mohamed_Firas_Ben_Khalifa_CV.pdf">
+          <ion-icon name="download-outline"></ion-icon>
+          <span data-en="Download CV" data-fr="Télécharger le CV">Download CV</span>
+        </a>
+
         <ul class="social-list">
 
           <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
+            <a href="https://github.com/firas191" target="_blank" rel="noopener" class="social-link" title="GitHub">
+              <ion-icon name="logo-github"></ion-icon>
             </a>
           </li>
 
           <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
+            <a href="https://www.linkedin.com/in/mohamedfirasbenkhalifa" target="_blank" rel="noopener" class="social-link" title="LinkedIn">
+              <ion-icon name="logo-linkedin"></ion-icon>
             </a>
           </li>
 
           <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
+            <a href="mailto:firasbenkhellifa@gmail.com" class="social-link" title="Email">
+              <ion-icon name="mail-outline"></ion-icon>
             </a>
           </li>
 
@@ -152,41 +161,34 @@
     </aside>
 
 
-
-
-
-    <!--
-      - #main-content
-    -->
+    <!-- #main-content -->
 
     <div class="main-content">
 
-      <!--
-        - #NAVBAR
-      -->
+      <!-- #NAVBAR -->
 
       <nav class="navbar">
 
         <ul class="navbar-list">
 
           <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
+            <button class="navbar-link active" data-nav-link data-nav-target="about" data-en="About" data-fr="À propos">About</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
+            <button class="navbar-link" data-nav-link data-nav-target="resume" data-en="Resume" data-fr="Parcours">Resume</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
+            <button class="navbar-link" data-nav-link data-nav-target="portfolio" data-en="Projects" data-fr="Projets">Projects</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Blog</button>
+            <button class="navbar-link" data-nav-link data-nav-target="certifications" data-en="Certifications" data-fr="Certifications">Certifications</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
+            <button class="navbar-link" data-nav-link data-nav-target="contact" data-en="Contact" data-fr="Contact">Contact</button>
           </li>
 
         </ul>
@@ -194,58 +196,82 @@
       </nav>
 
 
+      <!-- #ABOUT -->
 
-
-
-      <!--
-        - #ABOUT
-      -->
-
-      <article class="about  active" data-page="about">
+      <article class="about active" data-page="about">
 
         <header>
-          <h2 class="h2 article-title">About me</h2>
+          <h2 class="h2 article-title" data-en="About me" data-fr="À propos">About me</h2>
         </header>
 
         <section class="about-text">
-          <p>
-            I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print media.
-            I enjoy
-            turning complex problems into simple, beautiful and intuitive designs.
+          <p data-en="Hi, I'm Firas — an engineering student from Tunisia with a simple obsession: taking an idea, learning whatever it takes, and turning it into something people can actually use. That mindset has carried me from my first lines of code to building intelligent applications that solve real problems, and through an internship where my work ended up in the hands of real users."
+             data-fr="Bonjour, je suis Firas — un élève-ingénieur tunisien avec une obsession simple : prendre une idée, apprendre tout ce qu'il faut, et la transformer en quelque chose que les gens peuvent réellement utiliser. Cet état d'esprit m'a mené de mes premières lignes de code à des applications intelligentes qui résolvent de vrais problèmes, en passant par un stage où mon travail a fini entre les mains de vrais utilisateurs.">
+            Hi, I'm Firas — an engineering student from Tunisia with a simple obsession: taking an idea, learning whatever it takes, and turning it into something people can actually use. That mindset has carried me from my first lines of code to building intelligent applications that solve real problems, and through an internship where my work ended up in the hands of real users.
           </p>
 
-          <p>
-            My job is to build your website so that it is functional and user-friendly but at the same time attractive.
-            Moreover, I
-            add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring
-            across your
-            message and identity in the most creative way. I created web design for many famous brand companies.
+          <p data-en="I'm naturally curious: I speak four languages, love discovering new cultures, and enjoy giving back through open source. Whether I'm working solo or in a team, I bring energy, discipline and honest communication. Currently in my fourth year at ESPRIT, I'm looking for a team where I can learn fast, contribute from day one, and grow into the kind of engineer people love working with."
+             data-fr="Je suis curieux de nature : je parle quatre langues, j'adore découvrir de nouvelles cultures et je contribue à l'open source dès que je peux. Seul ou en équipe, j'apporte de l'énergie, de la rigueur et une communication honnête. Actuellement en quatrième année à ESPRIT, je cherche une équipe où apprendre vite, contribuer dès le premier jour et devenir le genre d'ingénieur avec qui on aime travailler.">
+            I'm naturally curious: I speak four languages, love discovering new cultures, and enjoy giving back through open source. Whether I'm working solo or in a team, I bring energy, discipline and honest communication. Currently in my fourth year at ESPRIT, I'm looking for a team where I can learn fast, contribute from day one, and grow into the kind of engineer people love working with.
           </p>
         </section>
 
+        <!-- beyond the code -->
+        <section class="highlights">
 
-        <!--
-          - service
-        -->
+          <h3 class="h3 service-title" data-en="Beyond the code" data-fr="Au-delà du code">Beyond the code</h3>
+
+          <ul class="highlights-list">
+
+            <li class="hl-item content-card">
+              <div class="hl-icon"><ion-icon name="language-outline"></ion-icon></div>
+              <h4 class="h4" data-en="4 Languages" data-fr="4 Langues">4 Languages</h4>
+              <p class="hl-text" data-en="Arabic, French, English &amp; German — and always tempted to start a fifth."
+                 data-fr="Arabe, français, anglais &amp; allemand — et toujours tenté d'en commencer une cinquième.">
+                Arabic, French, English &amp; German — and always tempted to start a fifth.</p>
+            </li>
+
+            <li class="hl-item content-card">
+              <div class="hl-icon"><ion-icon name="heart-outline"></ion-icon></div>
+              <h4 class="h4" data-en="Open Source" data-fr="Open Source">Open Source</h4>
+              <p class="hl-text" data-en="I believe in sharing what I learn and giving back to the community that taught me."
+                 data-fr="Je crois au partage de ce que j'apprends et au retour vers la communauté qui m'a formé.">
+                I believe in sharing what I learn and giving back to the community that taught me.</p>
+            </li>
+
+            <li class="hl-item content-card">
+              <div class="hl-icon"><ion-icon name="compass-outline"></ion-icon></div>
+              <h4 class="h4" data-en="Curious Explorer" data-fr="Explorateur Curieux">Curious Explorer</h4>
+              <p class="hl-text" data-en="New cultures, new places, new challenges — curiosity is my engine."
+                 data-fr="Nouvelles cultures, nouveaux horizons, nouveaux défis — la curiosité est mon moteur.">
+                New cultures, new places, new challenges — curiosity is my engine.</p>
+            </li>
+
+          </ul>
+
+        </section>
+
+        <!-- service -->
 
         <section class="service">
 
-          <h3 class="h3 service-title">What i'm doing</h3>
+          <h3 class="h3 service-title" data-en="What I do" data-fr="Ce que je fais">What I do</h3>
 
           <ul class="service-list">
 
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg
-                " alt="design icon" width="40">
+                <ion-icon name="sparkles-outline"></ion-icon>
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web design</h4>
+                <h4 class="h4 service-item-title" data-en="Agentic AI &amp; LLM Applications" data-fr="IA Agentique &amp; Applications LLM">Agentic AI &amp; LLM Applications</h4>
 
-                <p class="service-item-text">
-                  The most modern and high-quality design made at a professional level.
+                <p class="service-item-text"
+                   data-en="RAG pipelines, multi-agent orchestration, prompt engineering and local LLM deployment."
+                   data-fr="Pipelines RAG, orchestration multi-agents, prompt engineering et déploiement de LLM locaux.">
+                  RAG pipelines, multi-agent orchestration, prompt engineering and local LLM deployment.
                 </p>
               </div>
 
@@ -254,14 +280,16 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+                <ion-icon name="analytics-outline"></ion-icon>
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web development</h4>
+                <h4 class="h4 service-item-title" data-en="Machine &amp; Deep Learning" data-fr="Machine &amp; Deep Learning">Machine &amp; Deep Learning</h4>
 
-                <p class="service-item-text">
-                  High-quality development of sites at the professional level.
+                <p class="service-item-text"
+                   data-en="Model training and evaluation with PyTorch and TensorFlow — from classical ML to CNNs and transformers."
+                   data-fr="Entraînement et évaluation de modèles avec PyTorch et TensorFlow — du ML classique aux CNN et transformers.">
+                  Model training and evaluation with PyTorch and TensorFlow — from classical ML to CNNs and transformers.
                 </p>
               </div>
 
@@ -270,14 +298,16 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
+                <ion-icon name="eye-outline"></ion-icon>
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Mobile apps</h4>
+                <h4 class="h4 service-item-title" data-en="Computer Vision" data-fr="Vision par Ordinateur">Computer Vision</h4>
 
-                <p class="service-item-text">
-                  Professional development of applications for iOS and Android.
+                <p class="service-item-text"
+                   data-en="Real-time detection and recognition systems, including offline mobile inference on the edge."
+                   data-fr="Systèmes de détection et de reconnaissance temps réel, y compris l'inférence mobile hors ligne.">
+                  Real-time detection and recognition systems, including offline mobile inference on the edge.
                 </p>
               </div>
 
@@ -286,216 +316,19 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
+                <ion-icon name="layers-outline"></ion-icon>
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Photography</h4>
+                <h4 class="h4 service-item-title" data-en="Full-Stack AI Engineering" data-fr="Ingénierie IA Full-Stack">Full-Stack AI Engineering</h4>
 
-                <p class="service-item-text">
-                  I make high-quality photos of any category at a professional level.
+                <p class="service-item-text"
+                   data-en="FastAPI, Spring Boot, React and Flutter apps that put models in front of real users — Dockerized and secured."
+                   data-fr="Applications FastAPI, Spring Boot, React et Flutter qui mettent les modèles entre les mains des utilisateurs — Dockerisées et sécurisées.">
+                  FastAPI, Spring Boot, React and Flutter apps that put models in front of real users — Dockerized and secured.
                 </p>
               </div>
 
-            </li>
-
-          </ul>
-
-        </section>
-
-
-        <!--
-          - testimonials
-        -->
-
-        <section class="testimonials">
-
-          <h3 class="h3 testimonials-title">Testimonials</h3>
-
-          <ul class="testimonials-list has-scrollbar">
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Daniel lewis</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Jessica miller</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Emily evans</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Henry william</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
-        </section>
-
-
-        <!--
-          - testimonials modal
-        -->
-
-        <div class="modal-container" data-modal-container>
-
-          <div class="overlay" data-overlay></div>
-
-          <section class="testimonials-modal">
-
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-
-            <div class="modal-img-wrapper">
-              <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
-              </figure>
-
-              <img src="./assets/images/icon-quote.svg" alt="quote icon">
-            </div>
-
-            <div class="modal-content">
-
-              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
-
-              <time datetime="2021-06-14">14 June, 2021</time>
-
-              <div data-modal-text>
-                <p>
-                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                  lot of experience
-                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                  consectetur adipiscing
-                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                </p>
-              </div>
-
-            </div>
-
-          </section>
-
-        </div>
-
-
-        <!--
-          - clients
-        -->
-
-        <section class="clients">
-
-          <h3 class="h3 clients-title">Clients</h3>
-
-          <ul class="clients-list has-scrollbar">
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-1-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-2-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-3-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-4-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-5-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-6-color.png" alt="client logo">
-              </a>
             </li>
 
           </ul>
@@ -505,69 +338,45 @@
       </article>
 
 
-
-
-
-      <!--
-        - #RESUME
-      -->
+      <!-- #RESUME -->
 
       <article class="resume" data-page="resume">
 
         <header>
-          <h2 class="h2 article-title">Resume</h2>
+          <h2 class="h2 article-title" data-en="Resume" data-fr="Parcours">Resume</h2>
         </header>
 
         <section class="timeline">
 
           <div class="title-wrapper">
             <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
+              <ion-icon name="briefcase-outline"></ion-icon>
             </div>
 
-            <h3 class="h3">Education</h3>
+            <h3 class="h3" data-en="Experience" data-fr="Expérience">Experience</h3>
           </div>
 
           <ol class="timeline-list">
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">University school of the arts</h4>
+              <h4 class="h4 timeline-item-title"
+                  data-en="AI &amp; Software Engineering Intern — Whitecape Technologies"
+                  data-fr="Stagiaire Ingénierie IA &amp; Logiciel — Whitecape Technologies">AI &amp; Software Engineering Intern — Whitecape Technologies</h4>
 
-              <span>2007 — 2008</span>
+              <span data-en="2025 · Sousse, Tunisia · 6 weeks" data-fr="2025 · Sousse, Tunisie · 6 semaines">2025 · Sousse, Tunisia · 6 weeks</span>
 
-              <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">New york academy of art</h4>
-
-              <span>2006 — 2007</span>
-
-              <p class="timeline-text">
-                Ratione voluptatem sequi nesciunt, facere quisquams facere menda ossimus, omnis voluptas assumenda est
-                omnis..
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">High school of art and design</h4>
-
-              <span>2002 — 2004</span>
-
-              <p class="timeline-text">
-                Duis aute irure dolor in reprehenderit in voluptate, quila voluptas mag odit aut fugit, sed consequuntur
-                magni dolores
-                eos.
-              </p>
+              <ul class="timeline-bullets">
+                <li data-en="Built a full-stack smart note-taking web app (Spring Boot, React, MySQL) with a REST API."
+                    data-fr="Développé une application web full-stack de bloc-notes intelligent (Spring Boot, React, MySQL) avec API REST.">
+                  Built a full-stack smart note-taking web app (Spring Boot, React, MySQL) with a REST API.</li>
+                <li data-en="Deployed a local LLM (TinyLlama via Flask) for automatic content suggestions — cutting users' writing time by 70%."
+                    data-fr="Déployé un LLM local (TinyLlama via Flask) pour la suggestion automatique de contenu — réduisant le temps de rédaction de 70%.">
+                  Deployed a local LLM (TinyLlama via Flask) for automatic content suggestions — cutting users' writing time by 70%.</li>
+                <li data-en="Containerized the app with Docker, added Google &amp; GitHub OAuth, and automated email + SMS notifications."
+                    data-fr="Conteneurisé l'application avec Docker, ajouté l'OAuth Google &amp; GitHub et automatisé les notifications email + SMS.">
+                  Containerized the app with Docker, added Google &amp; GitHub OAuth, and automated email + SMS notifications.</li>
+              </ul>
 
             </li>
 
@@ -582,50 +391,34 @@
               <ion-icon name="book-outline"></ion-icon>
             </div>
 
-            <h3 class="h3">Experience</h3>
+            <h3 class="h3" data-en="Education" data-fr="Éducation">Education</h3>
           </div>
 
           <ol class="timeline-list">
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Creative director</h4>
+              <h4 class="h4 timeline-item-title"
+                  data-en="Engineering Degree in Computer Science — Data Science Track"
+                  data-fr="Cycle Ingénieur en Informatique — Spécialité Data Science">Engineering Degree in Computer Science — Data Science Track</h4>
 
-              <span>2015 — Present</span>
+              <span data-en="2022 — Present · ESPRIT, Ariana, Tunisia" data-fr="2022 — Présent · ESPRIT, Ariana, Tunisie">2022 — Present · ESPRIT, Ariana, Tunisia</span>
 
-              <p class="timeline-text">
-                Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et qvuas
-                molestias
-                exceptur.
+              <p class="timeline-text"
+                 data-en="2nd year of the engineering cycle (4th year overall, Bac+4), specializing in Data Science and Artificial Intelligence."
+                 data-fr="2ème année du cycle ingénieur (Bac+4), spécialité Data Science et Intelligence Artificielle.">
+                2nd year of the engineering cycle (4th year overall, Bac+4), specializing in Data Science and Artificial Intelligence.
               </p>
 
             </li>
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Art director</h4>
+              <h4 class="h4 timeline-item-title"
+                  data-en="Baccalaureate in Technical Sciences"
+                  data-fr="Baccalauréat Sciences Techniques">Baccalaureate in Technical Sciences</h4>
 
-              <span>2013 — 2015</span>
-
-              <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Web designer</h4>
-
-              <span>2010 — 2013</span>
-
-              <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
-              </p>
+              <span data-en="2022 · Lycée Les Elites, Sousse, Tunisia" data-fr="2022 · Lycée Les Elites, Sousse, Tunisie">2022 · Lycée Les Elites, Sousse, Tunisia</span>
 
             </li>
 
@@ -635,80 +428,90 @@
 
         <section class="skill">
 
-          <h3 class="h3 skills-title">My skills</h3>
+          <h3 class="h3 skills-title" data-en="Skills" data-fr="Compétences">Skills</h3>
 
-          <ul class="skills-list content-card">
+          <div class="content-card skills-card">
 
-            <li class="skills-item">
+            <div class="chip-group">
+              <h5 class="h5 chip-group-title" data-en="AI &amp; Data Science" data-fr="IA &amp; Data Science">AI &amp; Data Science</h5>
+              <ul class="chip-list">
+                <li class="chip">Agentic AI</li>
+                <li class="chip">RAG</li>
+                <li class="chip">LLMs</li>
+                <li class="chip">Prompt Engineering</li>
+                <li class="chip">Computer Vision</li>
+                <li class="chip">NLP</li>
+                <li class="chip">Deep Learning</li>
+                <li class="chip">Machine Learning</li>
+              </ul>
+            </div>
 
-              <div class="title-wrapper">
-                <h5 class="h5">Web design</h5>
-                <data value="80">80%</data>
-              </div>
+            <div class="chip-group">
+              <h5 class="h5 chip-group-title" data-en="Frameworks" data-fr="Frameworks">Frameworks</h5>
+              <ul class="chip-list">
+                <li class="chip">PyTorch</li>
+                <li class="chip">TensorFlow / TF Lite</li>
+                <li class="chip">HuggingFace</li>
+                <li class="chip">LangChain</li>
+                <li class="chip">scikit-learn</li>
+                <li class="chip">FastAPI</li>
+                <li class="chip">Spring Boot</li>
+                <li class="chip">React</li>
+                <li class="chip">Flutter</li>
+              </ul>
+            </div>
 
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
+            <div class="chip-group">
+              <h5 class="h5 chip-group-title" data-en="Programming Languages" data-fr="Langages">Programming Languages</h5>
+              <ul class="chip-list">
+                <li class="chip">Python</li>
+                <li class="chip">R</li>
+                <li class="chip">SQL / PL-SQL</li>
+                <li class="chip">Java</li>
+                <li class="chip">C / C++</li>
+                <li class="chip">C#</li>
+                <li class="chip">JavaScript</li>
+                <li class="chip">PHP</li>
+              </ul>
+            </div>
 
-            </li>
+            <div class="chip-group">
+              <h5 class="h5 chip-group-title" data-en="MLOps, Tools &amp; Databases" data-fr="MLOps, Outils &amp; Bases de données">MLOps, Tools &amp; Databases</h5>
+              <ul class="chip-list">
+                <li class="chip">Docker</li>
+                <li class="chip">Git / GitHub</li>
+                <li class="chip">REST APIs</li>
+                <li class="chip">OAuth</li>
+                <li class="chip">Jupyter / Colab</li>
+                <li class="chip">MySQL</li>
+                <li class="chip">MongoDB</li>
+                <li class="chip">SQL Server</li>
+              </ul>
+            </div>
 
-            <li class="skills-item">
+            <div class="chip-group">
+              <h5 class="h5 chip-group-title" data-en="Spoken Languages" data-fr="Langues">Spoken Languages</h5>
+              <ul class="chip-list">
+                <li class="chip" data-en="Arabic (native)" data-fr="Arabe (natif)">Arabic (native)</li>
+                <li class="chip" data-en="French (C1)" data-fr="Français (C1)">French (C1)</li>
+                <li class="chip" data-en="English (C1)" data-fr="Anglais (C1)">English (C1)</li>
+                <li class="chip" data-en="German (B1)" data-fr="Allemand (B1)">German (B1)</li>
+              </ul>
+            </div>
 
-              <div class="title-wrapper">
-                <h5 class="h5">Graphic design</h5>
-                <data value="70">70%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Branding</h5>
-                <data value="90">90%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">WordPress</h5>
-                <data value="50">50%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 50%;"></div>
-              </div>
-
-            </li>
-
-          </ul>
+          </div>
 
         </section>
 
       </article>
 
 
-
-
-
-      <!--
-        - #PORTFOLIO
-      -->
+      <!-- #PORTFOLIO -->
 
       <article class="portfolio" data-page="portfolio">
 
         <header>
-          <h2 class="h2 article-title">Portfolio</h2>
+          <h2 class="h2 article-title" data-en="Projects" data-fr="Projets">Projects</h2>
         </header>
 
         <section class="projects">
@@ -716,19 +519,23 @@
           <ul class="filter-list">
 
             <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
+              <button class="active" data-filter-btn data-filter-value="all" data-en="All" data-fr="Tous">All</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Web design</button>
+              <button data-filter-btn data-filter-value="agentic-ai" data-en="Agentic AI" data-fr="IA Agentique">Agentic AI</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Applications</button>
+              <button data-filter-btn data-filter-value="computer-vision" data-en="Computer Vision" data-fr="Vision par Ordinateur">Computer Vision</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Web development</button>
+              <button data-filter-btn data-filter-value="machine-learning" data-en="Machine Learning" data-fr="Machine Learning">Machine Learning</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn data-filter-value="full-stack" data-en="Full-Stack" data-fr="Full-Stack">Full-Stack</button>
             </li>
 
           </ul>
@@ -737,7 +544,7 @@
 
             <button class="filter-select" data-select>
 
-              <div class="select-value" data-selecct-value>Select category</div>
+              <div class="select-value" data-selecct-value data-en="Select category" data-fr="Choisir une catégorie">Select category</div>
 
               <div class="select-icon">
                 <ion-icon name="chevron-down"></ion-icon>
@@ -748,19 +555,23 @@
             <ul class="select-list">
 
               <li class="select-item">
-                <button data-select-item>All</button>
+                <button data-select-item data-filter-value="all" data-en="All" data-fr="Tous">All</button>
               </li>
 
               <li class="select-item">
-                <button data-select-item>Web design</button>
+                <button data-select-item data-filter-value="agentic-ai" data-en="Agentic AI" data-fr="IA Agentique">Agentic AI</button>
               </li>
 
               <li class="select-item">
-                <button data-select-item>Applications</button>
+                <button data-select-item data-filter-value="computer-vision" data-en="Computer Vision" data-fr="Vision par Ordinateur">Computer Vision</button>
               </li>
 
               <li class="select-item">
-                <button data-select-item>Web development</button>
+                <button data-select-item data-filter-value="machine-learning" data-en="Machine Learning" data-fr="Machine Learning">Machine Learning</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item data-filter-value="full-stack" data-en="Full-Stack" data-fr="Full-Stack">Full-Stack</button>
               </li>
 
             </ul>
@@ -769,164 +580,177 @@
 
           <ul class="project-list">
 
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
+            <!-- 1. SkillBridge AI (CV order) -->
+            <li class="project-item active" data-filter-item data-category="agentic-ai">
+              <a href="https://github.com/firas191/SkillBridge-AI" target="_blank" rel="noopener">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
+                    <ion-icon name="logo-github"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
+                  <img src="./assets/images/project-skillbridge.svg" alt="SkillBridge AI" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Finance</h3>
+                <h3 class="project-title">SkillBridge AI</h3>
 
-                <p class="project-category">Web development</p>
+                <p class="project-category" data-en="Agentic AI · Recruitment copilot" data-fr="IA Agentique · Copilot de recrutement">Agentic AI · Recruitment copilot</p>
+
+                <p class="project-desc"
+                   data-en="Extracts skills from CVs, computes explainable job-match scores and generates personalized learning paths — plus an HR agent with salary benchmarks and a rubric-scored interview simulator."
+                   data-fr="Extrait les compétences des CV, calcule des scores de matching explicables et génère des parcours d'apprentissage personnalisés — avec agent RH (benchmarks salariaux) et simulateur d'entretien noté par rubrique.">
+                  Extracts skills from CVs, computes explainable job-match scores and generates personalized learning paths — plus an HR agent with salary benchmarks and a rubric-scored interview simulator.
+                </p>
 
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
+            <!-- 2. AIGIS (CV order, private) -->
+            <li class="project-item active" data-filter-item data-category="computer-vision">
+              <a class="project-private">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
+                    <ion-icon name="lock-closed-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
+                  <img src="./assets/images/project-aigis.svg" alt="AIGIS" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Orizon</h3>
+                <h3 class="project-title">AIGIS</h3>
 
-                <p class="project-category">Web development</p>
+                <p class="project-category" data-en="Computer Vision · RAG · Private repository" data-fr="Vision par Ordinateur · RAG · Dépôt privé">Computer Vision · RAG · Private repository</p>
+
+                <p class="project-desc"
+                   data-en="Multimodal AI assistant for structural diagnosis: a trained CNN detects cracks &amp; corrosion in real time, paired with a full RAG pipeline that auto-generates diagnostic reports. Deployed full-stack (FastAPI/React) in production."
+                   data-fr="Assistant IA multimodal de diagnostic de structures : un CNN entraîné détecte fissures et corrosion en temps réel, couplé à un pipeline RAG complet générant automatiquement les rapports. Déployé en production (FastAPI/React).">
+                  Multimodal AI assistant for structural diagnosis: a trained CNN detects cracks &amp; corrosion in real time, paired with a full RAG pipeline that auto-generates diagnostic reports. Deployed full-stack (FastAPI/React) in production.
+                </p>
 
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
+            <!-- 3. AgriSmart (CV order, private) -->
+            <li class="project-item active" data-filter-item data-category="full-stack">
+              <a class="project-private">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
+                    <ion-icon name="lock-closed-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
+                  <img src="./assets/images/project-agrismart.svg" alt="AgriSmart" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Fundo</h3>
+                <h3 class="project-title">AgriSmart</h3>
 
-                <p class="project-category">Web design</p>
+                <p class="project-category" data-en="Mobile · AI Agents · Private repository" data-fr="Mobile · Agents IA · Dépôt privé">Mobile · AI Agents · Private repository</p>
+
+                <p class="project-desc"
+                   data-en="Mobile-first farming platform: LangChain-orchestrated agents automate irrigation recommendations, offline plant &amp; livestock disease detection (PyTorch / TF Lite), NDVI satellite analytics, VRA mapping and GPS herd tracking."
+                   data-fr="Plateforme agricole mobile-first : agents orchestrés par LangChain pour l'irrigation, détection hors ligne des maladies des plantes et du bétail (PyTorch / TF Lite), analyse satellitaire NDVI, VRA mapping et suivi GPS du bétail.">
+                  Mobile-first farming platform: LangChain-orchestrated agents automate irrigation recommendations, offline plant &amp; livestock disease detection (PyTorch / TF Lite), NDVI satellite analytics, VRA mapping and GPS herd tracking.
+                </p>
 
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
+            <!-- 4. FraudShield -->
+            <li class="project-item active" data-filter-item data-category="machine-learning">
+              <a href="https://github.com/firas191/FraudShield" target="_blank" rel="noopener">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
+                    <ion-icon name="logo-github"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
+                  <img src="./assets/images/project-fraudshield.svg" alt="FraudShield" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Brawlhalla</h3>
+                <h3 class="project-title">FraudShield</h3>
 
-                <p class="project-category">Applications</p>
+                <p class="project-category" data-en="Machine Learning · Federated · Privacy" data-fr="Machine Learning · Fédéré · Confidentialité">Machine Learning · Federated · Privacy</p>
+
+                <p class="project-desc"
+                   data-en="Federated learning platform for cross-bank fraud detection with differential privacy: three institutions co-train a fraud detector while raw transaction data never leaves each bank — only DP-noised model updates are shared."
+                   data-fr="Plateforme d'apprentissage fédéré pour la détection de fraude inter-banques avec confidentialité différentielle : trois institutions co-entraînent un détecteur sans que les données brutes ne quittent chaque banque — seules des mises à jour bruitées (DP) sont partagées.">
+                  Federated learning platform for cross-bank fraud detection with differential privacy: three institutions co-train a fraud detector while raw transaction data never leaves each bank — only DP-noised model updates are shared.
+                </p>
 
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
+            <!-- 5. InsightFlow AI -->
+            <li class="project-item active" data-filter-item data-category="agentic-ai">
+              <a href="https://github.com/firas191/InsightFlow-AI" target="_blank" rel="noopener">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
+                    <ion-icon name="logo-github"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
+                  <img src="./assets/images/project-insightflow.svg" alt="InsightFlow AI" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">DSM.</h3>
+                <h3 class="project-title">InsightFlow AI</h3>
 
-                <p class="project-category">Web design</p>
+                <p class="project-category" data-en="Agentic AI · NLP · Fine-tuning" data-fr="IA Agentique · NLP · Fine-tuning">Agentic AI · NLP · Fine-tuning</p>
+
+                <p class="project-desc"
+                   data-en="Enterprise Pulse Agent: a fine-tuned multi-task transformer (category, intent, sentiment) turns scattered support tickets into a daily business pulse — semantic retrieval of similar cases, summarized pain points, drafted replies and human-review checkpoints."
+                   data-fr="Enterprise Pulse Agent : un transformer multi-tâches fine-tuné (catégorie, intention, sentiment) transforme les tickets de support en un pulse quotidien — recherche sémantique de cas similaires, synthèse des points de douleur, réponses suggérées et validation humaine.">
+                  Enterprise Pulse Agent: a fine-tuned multi-task transformer (category, intent, sentiment) turns scattered support tickets into a daily business pulse — semantic retrieval of similar cases, summarized pain points, drafted replies and human-review checkpoints.
+                </p>
 
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
+            <!-- 6. Mini-Devin -->
+            <li class="project-item active" data-filter-item data-category="agentic-ai">
+              <a href="https://github.com/firas191/Mini-Devin" target="_blank" rel="noopener">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
+                    <ion-icon name="logo-github"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
+                  <img src="./assets/images/project-minidevin.svg" alt="Mini-Devin" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">MetaSpark</h3>
+                <h3 class="project-title">Mini-Devin</h3>
 
-                <p class="project-category">Web design</p>
+                <p class="project-category" data-en="Agentic AI · Autonomous coding agent" data-fr="IA Agentique · Agent de code autonome">Agentic AI · Autonomous coding agent</p>
+
+                <p class="project-desc"
+                   data-en="Autonomous software-engineering agent: GitHub issue in, validated patch out. A LangGraph pipeline maps the codebase (AST), locates faulty files (BM25 + LLM), plans a minimal fix, applies precise edits and retries via a critic agent until tests pass — evaluated on SWE-bench Lite."
+                   data-fr="Agent d'ingénierie logicielle autonome : une issue GitHub en entrée, un patch validé en sortie. Un pipeline LangGraph cartographie le code (AST), localise les fichiers fautifs (BM25 + LLM), planifie un correctif minimal, applique des éditions précises et réessaie via un agent critique jusqu'au succès des tests — évalué sur SWE-bench Lite.">
+                  Autonomous software-engineering agent: GitHub issue in, validated patch out. A LangGraph pipeline maps the codebase (AST), locates faulty files (BM25 + LLM), plans a minimal fix, applies precise edits and retries via a critic agent until tests pass — evaluated on SWE-bench Lite.
+                </p>
 
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
+            <!-- 7. Emotion Recognition -->
+            <li class="project-item active" data-filter-item data-category="computer-vision">
+              <a href="https://github.com/firas191/Image-Captioning" target="_blank" rel="noopener">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
+                    <ion-icon name="logo-github"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
+                  <img src="./assets/images/project-emotion.svg" alt="Face Emotion Recognition" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Summary</h3>
+                <h3 class="project-title" data-en="Face Emotion Recognition" data-fr="Reconnaissance d'Émotions">Face Emotion Recognition</h3>
 
-                <p class="project-category">Web development</p>
+                <p class="project-category" data-en="Computer Vision · Real-time" data-fr="Vision par Ordinateur · Temps réel">Computer Vision · Real-time</p>
 
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Task Manager</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Arrival</h3>
-
-                <p class="project-category">Web development</p>
+                <p class="project-desc"
+                   data-en="Real-time facial emotion recognition — EfficientNet-B3 trained on RAF-DB (87.6% test accuracy) with OpenCV face detection, test-time augmentation, BLIP scene captioning, voice output and session analytics."
+                   data-fr="Reconnaissance faciale des émotions en temps réel — EfficientNet-B3 entraîné sur RAF-DB (87,6% de précision) avec détection de visage OpenCV, test-time augmentation, captioning BLIP, sortie vocale et analytique de session.">
+                  Real-time facial emotion recognition — EfficientNet-B3 trained on RAF-DB (87.6% test accuracy) with OpenCV face detection, test-time augmentation, BLIP scene captioning, voice output and session analytics.
+                </p>
 
               </a>
             </li>
@@ -938,188 +762,98 @@
       </article>
 
 
+      <!-- #CERTIFICATIONS -->
 
-
-
-      <!--
-        - #BLOG
-      -->
-
-      <article class="blog" data-page="blog">
+      <article class="certifications" data-page="certifications">
 
         <header>
-          <h2 class="h2 article-title">Blog</h2>
+          <h2 class="h2 article-title" data-en="Certifications" data-fr="Certifications">Certifications</h2>
         </header>
 
-        <section class="blog-posts">
+        <p class="cert-intro"
+           data-en="Seven certifications from the NVIDIA Deep Learning Institute, covering the modern LLM engineering stack — from deep learning fundamentals to production agentic applications. Click any card to verify the certificate."
+           data-fr="Sept certifications du NVIDIA Deep Learning Institute, couvrant la stack moderne d'ingénierie LLM — des fondamentaux du deep learning aux applications agentiques en production. Cliquez sur une carte pour vérifier le certificat.">
+          Seven certifications from the NVIDIA Deep Learning Institute, covering the modern LLM engineering stack — from deep learning fundamentals to production agentic applications. Click any card to verify the certificate.
+        </p>
 
-          <ul class="blog-posts-list">
+        <section class="cert-section">
 
-            <li class="blog-post-item">
-              <a href="#">
+          <ul class="cert-list">
 
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
-
-                  <p class="blog-text">
-                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
-                  </p>
-
+            <li>
+              <a class="cert-item content-card" href="https://learn.nvidia.com/certificates?id=uXlGCuFbT1Gt35rqy6RsgQ" target="_blank" rel="noopener">
+                <div class="cert-icon"><ion-icon name="ribbon-outline"></ion-icon></div>
+                <div class="cert-body">
+                  <h4 class="h4">Building Agentic AI Applications with Large Language Models</h4>
+                  <p class="cert-issuer">NVIDIA Deep Learning Institute</p>
                 </div>
-
+                <ion-icon class="cert-open" name="open-outline"></ion-icon>
               </a>
             </li>
 
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Best fonts every designer</h3>
-
-                  <p class="blog-text">
-                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
-                  </p>
-
+            <li>
+              <a class="cert-item content-card" href="https://learn.nvidia.com/certificates?id=8TyUxnT_QgGI4gmYYP8I-g" target="_blank" rel="noopener">
+                <div class="cert-icon"><ion-icon name="ribbon-outline"></ion-icon></div>
+                <div class="cert-body">
+                  <h4 class="h4">Building RAG Agents with LLMs</h4>
+                  <p class="cert-issuer">NVIDIA Deep Learning Institute</p>
                 </div>
-
+                <ion-icon class="cert-open" name="open-outline"></ion-icon>
               </a>
             </li>
 
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #80</h3>
-
-                  <p class="blog-text">
-                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
-                  </p>
-
+            <li>
+              <a class="cert-item content-card" href="https://learn.nvidia.com/certificates?id=IikyISctSbCZF19omk-s-A" target="_blank" rel="noopener">
+                <div class="cert-icon"><ion-icon name="ribbon-outline"></ion-icon></div>
+                <div class="cert-body">
+                  <h4 class="h4">Rapid Application Development with Large Language Models (LLMs)</h4>
+                  <p class="cert-issuer">NVIDIA Deep Learning Institute</p>
                 </div>
-
+                <ion-icon class="cert-open" name="open-outline"></ion-icon>
               </a>
             </li>
 
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">UI interactions of the week</h3>
-
-                  <p class="blog-text">
-                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
-                  </p>
-
+            <li>
+              <a class="cert-item content-card" href="https://learn.nvidia.com/certificates?id=53JHmdxKROGdgS-a7xZ4FQ" target="_blank" rel="noopener">
+                <div class="cert-icon"><ion-icon name="ribbon-outline"></ion-icon></div>
+                <div class="cert-body">
+                  <h4 class="h4">Building LLM Applications With Prompt Engineering</h4>
+                  <p class="cert-issuer">NVIDIA Deep Learning Institute</p>
                 </div>
-
+                <ion-icon class="cert-open" name="open-outline"></ion-icon>
               </a>
             </li>
 
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
-
-                  <p class="blog-text">
-                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </p>
-
+            <li>
+              <a class="cert-item content-card" href="https://learn.nvidia.com/certificates?id=GrJ7usTdRCmZRhEWz7gkcQ" target="_blank" rel="noopener">
+                <div class="cert-icon"><ion-icon name="ribbon-outline"></ion-icon></div>
+                <div class="cert-body">
+                  <h4 class="h4">Introduction to Transformer-Based Natural Language Processing</h4>
+                  <p class="cert-issuer">NVIDIA Deep Learning Institute</p>
                 </div>
-
+                <ion-icon class="cert-open" name="open-outline"></ion-icon>
               </a>
             </li>
 
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #79</h3>
-
-                  <p class="blog-text">
-                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
-                  </p>
-
+            <li>
+              <a class="cert-item content-card" href="https://learn.nvidia.com/certificates?id=-bUEio_gR0KB5efH0IbdKg" target="_blank" rel="noopener">
+                <div class="cert-icon"><ion-icon name="ribbon-outline"></ion-icon></div>
+                <div class="cert-body">
+                  <h4 class="h4">Applications of AI for Anomaly Detection</h4>
+                  <p class="cert-issuer">NVIDIA Deep Learning Institute</p>
                 </div>
+                <ion-icon class="cert-open" name="open-outline"></ion-icon>
+              </a>
+            </li>
 
+            <li>
+              <a class="cert-item content-card" href="https://learn.nvidia.com/certificates?id=QrCHNAPDQ22AcTapTRa6gg" target="_blank" rel="noopener">
+                <div class="cert-icon"><ion-icon name="ribbon-outline"></ion-icon></div>
+                <div class="cert-body">
+                  <h4 class="h4">Fundamentals of Deep Learning</h4>
+                  <p class="cert-issuer">NVIDIA Deep Learning Institute</p>
+                </div>
+                <ion-icon class="cert-open" name="open-outline"></ion-icon>
               </a>
             </li>
 
@@ -1130,44 +864,40 @@
       </article>
 
 
-
-
-
-      <!--
-        - #CONTACT
-      -->
+      <!-- #CONTACT -->
 
       <article class="contact" data-page="contact">
 
         <header>
-          <h2 class="h2 article-title">Contact</h2>
+          <h2 class="h2 article-title" data-en="Contact" data-fr="Contact">Contact</h2>
         </header>
 
-        <section class="mapbox" data-mapbox>
-          <figure>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
-              width="400" height="300" loading="lazy"></iframe>
-          </figure>
-        </section>
+        <p class="contact-intro"
+           data-en="Open to AI/ML internships, end-of-studies projects (PFE) and junior opportunities — on-site in Tunisia or remote. I usually reply within 24 hours."
+           data-fr="Ouvert aux stages IA/ML, projets de fin d'études (PFE) et opportunités junior — sur site en Tunisie ou à distance. Je réponds généralement sous 24h.">
+          Open to AI/ML internships, end-of-studies projects (PFE) and junior opportunities — on-site in Tunisia or remote. I usually reply within 24 hours.
+        </p>
 
         <section class="contact-form">
 
-          <h3 class="h3 form-title">Contact Form</h3>
+          <h3 class="h3 form-title" data-en="Send me a message" data-fr="Envoyez-moi un message">Send me a message</h3>
 
           <form action="#" class="form" data-form>
 
             <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input
+                     data-en-ph="Full name" data-fr-ph="Nom complet">
 
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input
+                     data-en-ph="Email address" data-fr-ph="Adresse email">
             </div>
 
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+            <textarea name="message" class="form-input" placeholder="Your message" required data-form-input
+                      data-en-ph="Your message" data-fr-ph="Votre message"></textarea>
 
             <button class="form-btn" type="submit" disabled data-form-btn>
               <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
+              <span data-en="Send Message" data-fr="Envoyer">Send Message</span>
             </button>
 
           </form>
@@ -1181,18 +911,10 @@
   </main>
 
 
-
-
-
-
-  <!--
-    - custom js link
-  -->
+  <!-- custom js link -->
   <script src="./assets/js/script.js"></script>
 
-  <!--
-    - ionicon link
-  -->
+  <!-- ionicon link -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
