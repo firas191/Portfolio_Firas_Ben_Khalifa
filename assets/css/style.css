@@ -1921,7 +1921,21 @@ textarea.form-input::-webkit-resizer { display: none; }
   .lang-toggle { padding: 10px 8px; }
 }
 
-/* sidebar CV download button */
+/* sidebar CV buttons (download + preview) */
+
+.cv-btn-row {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.cv-btn-row .cv-download-btn {
+  flex: 1;
+  margin-bottom: 0;
+  min-width: 0;
+  white-space: nowrap;
+}
 
 .cv-download-btn {
   display: flex;
