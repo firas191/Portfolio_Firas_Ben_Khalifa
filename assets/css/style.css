@@ -1907,14 +1907,6 @@ html.light .info-content .title {
   color: hsl(230, 12%, 20%);
 }
 
-/* full name: allow a clean two-line wrap on desktop */
-
-@media (min-width: 1250px) {
-  .info-content .name {
-    white-space: normal;
-    line-height: 1.35;
-  }
-}
 
 
 
