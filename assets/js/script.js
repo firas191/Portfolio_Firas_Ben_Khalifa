@@ -351,5 +351,3 @@ if (themeToggle) {
 applyTheme(document.documentElement.classList.contains('light') ? 'light' : 'dark');
 applyLanguage(currentLang());
 
-const yearEl = $('[data-year]');
-if (yearEl) yearEl.textContent = String(new Date().getFullYear());

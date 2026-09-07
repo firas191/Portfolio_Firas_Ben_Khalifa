@@ -1,6 +1,6 @@
 # Firas Ben Khalifa — Personal Portfolio
 
-**Live site:** [firas191.github.io/Portfolio_Mohamed_Firas_Ben_Khalifa](https://firas191.github.io/Portfolio_Mohamed_Firas_Ben_Khalifa/)
+**Live site:** [firas191.github.io/Portfolio_Firas_Ben_Khalifa](https://firas191.github.io/Portfolio_Firas_Ben_Khalifa/)
 
 Portfolio of a Data Science & AI engineering student at ESPRIT, showcasing AI/ML projects, professional experience and NVIDIA Deep Learning Institute certifications.
 
