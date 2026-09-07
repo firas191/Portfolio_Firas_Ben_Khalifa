@@ -1,207 +1,355 @@
 'use strict';
 
+/**
+ * Portfolio — Firas Ben Khalifa
+ * Vanilla JS. No build step, no dependencies.
+ *
+ * Sections below, in order:
+ *   1. helpers
+ *   2. sidebar (mobile contacts toggle)
+ *   3. project filtering
+ *   4. contact form
+ *   5. page navigation (hash-routed)
+ *   6. CV: language-aware files + preview modal
+ *   7. language switching (EN / FR)
+ *   8. theme switching (dark / light)
+ */
 
 
-// element toggle function
-const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
+/* ------------------------------------------------------------------ *
+ * 1. helpers
+ * ------------------------------------------------------------------ */
+
+const $ = (sel, root) => (root || document).querySelector(sel);
+const $$ = (sel, root) => Array.prototype.slice.call((root || document).querySelectorAll(sel));
+
+const store = {
+  get(key, fallback) {
+    try { return localStorage.getItem(key) || fallback; } catch (e) { return fallback; }
+  },
+  set(key, value) {
+    try { localStorage.setItem(key, value); } catch (e) { /* private mode */ }
+  }
+};
+
+const currentLang = () => (document.documentElement.lang === 'fr' ? 'fr' : 'en');
 
 
+/* ------------------------------------------------------------------ *
+ * 2. sidebar — contacts toggle on small screens
+ * ------------------------------------------------------------------ */
 
-// sidebar variables
-const sidebar = document.querySelector("[data-sidebar]");
-const sidebarBtn = document.querySelector("[data-sidebar-btn]");
+const sidebar = $('[data-sidebar]');
+const sidebarBtn = $('[data-sidebar-btn]');
 
-// sidebar toggle functionality for mobile
-if (sidebarBtn) sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
-
-
-
-// custom select variables
-const select = document.querySelector("[data-select]");
-const selectItems = document.querySelectorAll("[data-select-item]");
-const selectValue = document.querySelector("[data-selecct-value]");
-const filterBtn = document.querySelectorAll("[data-filter-btn]");
-
-if (select) select.addEventListener("click", function () { elementToggleFunc(this); });
-
-// add event in all select items
-for (let i = 0; i < selectItems.length; i++) {
-  selectItems[i].addEventListener("click", function () {
-
-    let selectedValue = this.dataset.filterValue;
-    selectValue.innerText = this.innerText;
-    elementToggleFunc(select);
-    filterFunc(selectedValue);
-
+if (sidebar && sidebarBtn) {
+  sidebarBtn.addEventListener('click', function () {
+    const open = sidebar.classList.toggle('active');
+    sidebarBtn.setAttribute('aria-expanded', String(open));
   });
 }
 
-// filter variables
-const filterItems = document.querySelectorAll("[data-filter-item]");
 
-const filterFunc = function (selectedValue) {
+/* ------------------------------------------------------------------ *
+ * 3. project filtering
+ * ------------------------------------------------------------------ */
 
-  for (let i = 0; i < filterItems.length; i++) {
+const filterItems = $$('[data-filter-item]');
+const filterBtns = $$('[data-filter-btn]');
+const selectBox = $('[data-select]');
+const selectItems = $$('[data-select-item]');
+const selectValue = $('[data-select-value]');
 
-    if (selectedValue === "all") {
-      filterItems[i].classList.add("active");
-    } else if (selectedValue === filterItems[i].dataset.category) {
-      filterItems[i].classList.add("active");
-    } else {
-      filterItems[i].classList.remove("active");
+let activeFilter = 'all';
+
+const applyFilter = function (value) {
+  activeFilter = value;
+
+  filterItems.forEach(function (item) {
+    item.classList.toggle('active', value === 'all' || value === item.dataset.category);
+  });
+
+  filterBtns.forEach(function (btn) {
+    btn.classList.toggle('active', btn.dataset.filterValue === value);
+  });
+
+  // keep the mobile select label in sync, in the current language
+  if (selectValue) {
+    const source = filterBtns.find(function (btn) { return btn.dataset.filterValue === value; });
+    if (source) {
+      const label = currentLang() === 'fr' ? source.dataset.fr : source.dataset.en;
+      selectValue.textContent = label || source.textContent;
     }
+  }
+};
 
+if (selectBox) {
+  selectBox.addEventListener('click', function () {
+    const open = selectBox.classList.toggle('active');
+    selectBox.setAttribute('aria-expanded', String(open));
+  });
+}
+
+selectItems.forEach(function (item) {
+  item.addEventListener('click', function () {
+    applyFilter(this.dataset.filterValue);
+    selectBox.classList.remove('active');
+    selectBox.setAttribute('aria-expanded', 'false');
+  });
+});
+
+filterBtns.forEach(function (btn) {
+  btn.addEventListener('click', function () { applyFilter(this.dataset.filterValue); });
+});
+
+
+/* ------------------------------------------------------------------ *
+ * 4. contact form — opens the visitor's mail client
+ * ------------------------------------------------------------------ */
+
+const form = $('[data-form]');
+const formBtn = $('[data-form-btn]');
+
+if (form && formBtn) {
+
+  const syncFormBtn = function () {
+    if (form.checkValidity()) formBtn.removeAttribute('disabled');
+    else formBtn.setAttribute('disabled', '');
+  };
+
+  $$('[data-form-input]', form).forEach(function (input) {
+    input.addEventListener('input', syncFormBtn);
+  });
+
+  syncFormBtn();
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!form.checkValidity()) return;
+
+    const name = form.elements.fullname.value.trim();
+    const email = form.elements.email.value.trim();
+    const message = form.elements.message.value.trim();
+
+    const subject = encodeURIComponent('Portfolio contact from ' + name);
+    const body = encodeURIComponent(message + '\n\n— ' + name + ' (' + email + ')');
+
+    window.location.href = 'mailto:firasbenkhellifa@gmail.com?subject=' + subject + '&body=' + body;
+  });
+}
+
+
+/* ------------------------------------------------------------------ *
+ * 5. page navigation — hash-routed so sections are linkable
+ * ------------------------------------------------------------------ */
+
+const navLinks = $$('[data-nav-link]');
+const pages = $$('[data-page]');
+const validPages = pages.map(function (p) { return p.dataset.page; });
+
+const showPage = function (target, updateHash) {
+  if (validPages.indexOf(target) === -1) target = validPages[0];
+
+  pages.forEach(function (page) {
+    page.classList.toggle('active', page.dataset.page === target);
+  });
+
+  navLinks.forEach(function (link) {
+    const isActive = link.dataset.navTarget === target;
+    link.classList.toggle('active', isActive);
+    if (isActive) link.setAttribute('aria-current', 'page');
+    else link.removeAttribute('aria-current');
+  });
+
+  if (updateHash && window.location.hash.slice(1) !== target) {
+    history.pushState(null, '', '#' + target);
   }
 
-}
+  window.scrollTo(0, 0);
+};
 
-// add event in all filter button items for large screen
-let lastClickedBtn = filterBtn[0];
+navLinks.forEach(function (link) {
+  link.addEventListener('click', function () { showPage(this.dataset.navTarget, true); });
+});
 
-for (let i = 0; i < filterBtn.length; i++) {
+window.addEventListener('popstate', function () {
+  showPage(window.location.hash.slice(1), false);
+});
 
-  filterBtn[i].addEventListener("click", function () {
+if (window.location.hash) showPage(window.location.hash.slice(1), false);
 
-    let selectedValue = this.dataset.filterValue;
-    if (selectValue) selectValue.innerText = this.innerText;
-    filterFunc(selectedValue);
 
-    lastClickedBtn.classList.remove("active");
-    this.classList.add("active");
-    lastClickedBtn = this;
+/* ------------------------------------------------------------------ *
+ * 6. CV — the selected language decides which PDF is used
+ * ------------------------------------------------------------------ */
 
+const CV_FILES = {
+  en: { file: './Resume_Firas_Ben_Khalifa.pdf', download: 'Firas_Ben_Khalifa_Resume.pdf' },
+  fr: { file: './Curriculum_Vitae_Firas_Ben_Khalifa.pdf', download: 'Firas_Ben_Khalifa_CV.pdf' }
+};
+
+const CV_LABELS = {
+  en: { en: 'English version', fr: 'Version anglaise' },
+  fr: { en: 'French version', fr: 'Version française' }
+};
+
+const cvModal = $('[data-cv-modal]');
+const cvFrame = $('[data-cv-frame]');
+const cvLangLabel = $('[data-cv-lang-label]');
+const cvLangBtns = $$('[data-cv-lang]');
+
+// which CV is currently selected; follows the site language until the
+// visitor overrides it inside the modal
+let cvLang = currentLang();
+
+const applyCvLanguage = function (lang) {
+  cvLang = CV_FILES[lang] ? lang : 'en';
+  const cv = CV_FILES[cvLang];
+
+  // sidebar + contact download buttons
+  $$('[data-cv-download], [data-cv-download-modal]').forEach(function (el) {
+    el.setAttribute('href', cv.file);
+    el.setAttribute('download', cv.download);
   });
 
-}
+  $$('[data-cv-newtab]').forEach(function (el) { el.setAttribute('href', cv.file); });
 
+  // only load the PDF while the modal is actually open
+  if (cvFrame && cvModal && !cvModal.hidden) cvFrame.setAttribute('src', cv.file);
 
+  if (cvLangLabel) cvLangLabel.textContent = CV_LABELS[cvLang][currentLang()];
 
-// contact form variables
-const form = document.querySelector("[data-form]");
-const formInputs = document.querySelectorAll("[data-form-input]");
-const formBtn = document.querySelector("[data-form-btn]");
-
-// add event to all form input field
-for (let i = 0; i < formInputs.length; i++) {
-  formInputs[i].addEventListener("input", function () {
-
-    // check form validation
-    if (form.checkValidity()) {
-      formBtn.removeAttribute("disabled");
-    } else {
-      formBtn.setAttribute("disabled", "");
-    }
-
+  cvLangBtns.forEach(function (btn) {
+    const isActive = btn.dataset.cvLang === cvLang;
+    btn.classList.toggle('active', isActive);
+    btn.setAttribute('aria-pressed', String(isActive));
   });
-}
+};
 
-// open the visitor's mail client with the message pre-filled
-if (form) {
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    const name = form.elements["fullname"].value;
-    const email = form.elements["email"].value;
-    const message = form.elements["message"].value;
-    const subject = encodeURIComponent("Portfolio contact from " + name);
-    const body = encodeURIComponent(message + "\n\n— " + name + " (" + email + ")");
-    window.location.href = "mailto:firasbenkhellifa@gmail.com?subject=" + subject + "&body=" + body;
-  });
-}
+let cvLastFocus = null;
 
+const openCvModal = function () {
+  if (!cvModal) return;
+  cvLastFocus = document.activeElement;
+  cvModal.hidden = false;
+  document.body.classList.add('no-scroll');
+  if (cvFrame) cvFrame.setAttribute('src', CV_FILES[cvLang].file);
+  const closeBtn = $('.cv-modal-close', cvModal);
+  if (closeBtn) closeBtn.focus();
+};
 
+const closeCvModal = function () {
+  if (!cvModal || cvModal.hidden) return;
+  cvModal.hidden = true;
+  document.body.classList.remove('no-scroll');
+  // release the PDF so it is not kept in memory behind the page
+  if (cvFrame) cvFrame.setAttribute('src', 'about:blank');
+  if (cvLastFocus && cvLastFocus.focus) cvLastFocus.focus();
+};
 
-// page navigation variables
-const navigationLinks = document.querySelectorAll("[data-nav-link]");
-const pages = document.querySelectorAll("[data-page]");
+$$('[data-cv-open]').forEach(function (btn) { btn.addEventListener('click', openCvModal); });
+$$('[data-cv-close]').forEach(function (btn) { btn.addEventListener('click', closeCvModal); });
 
-// add event to all nav link
-for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function () {
+cvLangBtns.forEach(function (btn) {
+  btn.addEventListener('click', function () { applyCvLanguage(this.dataset.cvLang); });
+});
 
-    const target = this.dataset.navTarget;
-
-    for (let j = 0; j < pages.length; j++) {
-      if (target === pages[j].dataset.page) {
-        pages[j].classList.add("active");
-      } else {
-        pages[j].classList.remove("active");
-      }
-    }
-
-    for (let j = 0; j < navigationLinks.length; j++) {
-      navigationLinks[j].classList.remove("active");
-    }
-    this.classList.add("active");
-    window.scrollTo(0, 0);
-
-  });
-}
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') closeCvModal();
+});
 
 
+/* ------------------------------------------------------------------ *
+ * 7. language switching (EN / FR)
+ * ------------------------------------------------------------------ */
 
-// ---- language toggle (EN / FR) ----
-const langToggle = document.querySelector("[data-lang-toggle]");
-const langOpts = document.querySelectorAll("[data-lang-opt]");
+const langToggle = $('[data-lang-toggle]');
+const langOpts = $$('[data-lang-opt]');
 
 const applyLanguage = function (lang) {
 
   document.documentElement.lang = lang;
 
-  // swap text content
-  document.querySelectorAll("[data-en]").forEach(function (el) {
-    const value = lang === "fr" ? el.dataset.fr : el.dataset.en;
-    if (value !== undefined) el.innerHTML = value;
+  // text content
+  $$('[data-en]').forEach(function (el) {
+    const value = lang === 'fr' ? el.dataset.fr : el.dataset.en;
+    if (value === undefined) return;
+    if (el.tagName === 'META') el.setAttribute('content', value);
+    else el.innerHTML = value;
   });
 
-  // swap placeholders
-  document.querySelectorAll("[data-en-ph]").forEach(function (el) {
-    el.placeholder = lang === "fr" ? el.dataset.frPh : el.dataset.enPh;
+  // input placeholders
+  $$('[data-en-ph]').forEach(function (el) {
+    el.placeholder = lang === 'fr' ? el.dataset.frPh : el.dataset.enPh;
   });
 
-  // highlight active option
+  // accessible labels
+  $$('[data-en-label]').forEach(function (el) {
+    el.setAttribute('aria-label', lang === 'fr' ? el.dataset.frLabel : el.dataset.enLabel);
+  });
+
   langOpts.forEach(function (opt) {
-    opt.classList.toggle("active", opt.dataset.langOpt === lang);
+    opt.classList.toggle('active', opt.dataset.langOpt === lang);
   });
 
-  try { localStorage.setItem("portfolio-lang", lang); } catch (e) { /* private mode */ }
+  // dependent UI that is not a simple text swap
+  applyFilter(activeFilter);
+  applyCvLanguage(lang);
+
+  store.set('portfolio-lang', lang);
 };
 
 if (langToggle) {
-  langToggle.addEventListener("click", function () {
-    const next = document.documentElement.lang === "fr" ? "en" : "fr";
-    applyLanguage(next);
+  langToggle.addEventListener('click', function () {
+    applyLanguage(currentLang() === 'fr' ? 'en' : 'fr');
   });
 }
 
-// restore saved language
-(function () {
-  let saved = "en";
-  try { saved = localStorage.getItem("portfolio-lang") || "en"; } catch (e) { /* ignore */ }
-  if (saved === "fr") applyLanguage("fr");
-})();
 
+/* ------------------------------------------------------------------ *
+ * 8. theme switching (dark / light)
+ * ------------------------------------------------------------------ */
 
+const themeToggle = $('[data-theme-toggle]');
+const themeIcon = $('[data-theme-icon]');
+const themeMeta = $('[data-theme-color]');
 
-// ---- theme toggle (dark / light) ----
-const themeToggle = document.querySelector("[data-theme-toggle]");
-const themeIcon = document.querySelector("[data-theme-icon]");
+const THEME_LABELS = {
+  dark: { en: 'Switch to light mode', fr: 'Passer en mode clair' },
+  light: { en: 'Switch to dark mode', fr: 'Passer en mode sombre' }
+};
 
 const applyTheme = function (theme) {
-  document.documentElement.classList.toggle("light", theme === "light");
-  if (themeIcon) themeIcon.setAttribute("name", theme === "light" ? "sunny-outline" : "moon-outline");
-  try { localStorage.setItem("portfolio-theme", theme); } catch (e) { /* private mode */ }
+  const isLight = theme === 'light';
+
+  document.documentElement.classList.toggle('light', isLight);
+  if (themeIcon) themeIcon.setAttribute('name', isLight ? 'sunny-outline' : 'moon-outline');
+  if (themeMeta) themeMeta.setAttribute('content', isLight ? '#f0ece3' : '#121212');
+
+  if (themeToggle) {
+    const labels = THEME_LABELS[isLight ? 'light' : 'dark'];
+    themeToggle.dataset.enLabel = labels.en;
+    themeToggle.dataset.frLabel = labels.fr;
+    themeToggle.setAttribute('aria-label', labels[currentLang()]);
+  }
+
+  store.set('portfolio-theme', theme);
 };
 
 if (themeToggle) {
-  themeToggle.addEventListener("click", function () {
-    const next = document.documentElement.classList.contains("light") ? "dark" : "light";
-    applyTheme(next);
+  themeToggle.addEventListener('click', function () {
+    applyTheme(document.documentElement.classList.contains('light') ? 'dark' : 'light');
   });
 }
 
-// restore saved theme (default: dark)
-(function () {
-  let saved = "dark";
-  try { saved = localStorage.getItem("portfolio-theme") || "dark"; } catch (e) { /* ignore */ }
-  if (saved === "light") applyTheme("light");
-})();
+
+/* ------------------------------------------------------------------ *
+ * boot — the inline <head> script already set the class/lang, so this
+ * only syncs the rest of the UI to that state
+ * ------------------------------------------------------------------ */
+
+applyTheme(document.documentElement.classList.contains('light') ? 'light' : 'dark');
+applyLanguage(currentLang());
+
+const yearEl = $('[data-year]');
+if (yearEl) yearEl.textContent = String(new Date().getFullYear());

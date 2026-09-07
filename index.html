@@ -3,15 +3,47 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-  <meta name="description"
-    content="Portfolio of Mohamed Firas Ben Khalifa — Data Science & AI engineering student at ESPRIT. Agentic AI, LLM applications, computer vision and full-stack AI products.">
+
+  <title data-en="Firas Ben Khalifa — Data Science &amp; AI Engineer" data-fr="Firas Ben Khalifa — Ingénieur Data Science &amp; IA">Firas Ben Khalifa — Data Science &amp; AI Engineer</title>
+
+  <meta name="description" data-meta-desc
+    data-en="Firas Ben Khalifa — final-year Data Science &amp; AI engineering student. Agentic AI, RAG pipelines, LLM engineering, computer vision and full-stack AI products. Open to a 6-month end-of-studies internship from January 2027."
+    data-fr="Firas Ben Khalifa — élève-ingénieur en Data Science &amp; IA en dernière année. IA agentique, pipelines RAG, LLM engineering, vision par ordinateur et produits IA full-stack. À la recherche d'un stage PFE de 6 mois à partir de janvier 2027."
+    content="Firas Ben Khalifa — final-year Data Science &amp; AI engineering student. Agentic AI, RAG pipelines, LLM engineering, computer vision and full-stack AI products. Open to a 6-month end-of-studies internship from January 2027.">
+
+  <meta name="author" content="Firas Ben Khalifa">
+  <meta name="theme-color" content="#121212" data-theme-color>
+  <link rel="canonical" href="https://firas191.github.io/Portfolio_Mohamed_Firas_Ben_Khalifa/">
+
+  <!-- social preview -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Firas Ben Khalifa — Data Science &amp; AI Engineer" data-og-title
+        data-en="Firas Ben Khalifa — Data Science &amp; AI Engineer"
+        data-fr="Firas Ben Khalifa — Ingénieur Data Science &amp; IA">
+  <meta property="og:description" content="Agentic AI, RAG pipelines, LLM engineering and full-stack AI products. Open to a 6-month end-of-studies internship from January 2027." data-og-desc
+        data-en="Agentic AI, RAG pipelines, LLM engineering and full-stack AI products. Open to a 6-month end-of-studies internship from January 2027."
+        data-fr="IA agentique, pipelines RAG, LLM engineering et produits IA full-stack. À la recherche d'un stage PFE de 6 mois à partir de janvier 2027.">
+  <meta property="og:url" content="https://firas191.github.io/Portfolio_Mohamed_Firas_Ben_Khalifa/">
+  <meta property="og:image" content="https://firas191.github.io/Portfolio_Mohamed_Firas_Ben_Khalifa/Profile%20Picture.jpg">
+  <meta name="twitter:card" content="summary">
 
   <!-- favicon -->
-  <link rel="icon" type="image/jpeg" href="./Profile%20Picture.jpg">
-  <link rel="shortcut icon" href="./Profile%20Picture.jpg">
+  <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg">
+  <link rel="apple-touch-icon" href="./Profile%20Picture.jpg">
+
+  <!-- apply saved theme before first paint (prevents a flash of the wrong theme) -->
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem("portfolio-theme") === "light") {
+          document.documentElement.classList.add("light");
+        }
+        var l = localStorage.getItem("portfolio-lang");
+        if (l === "fr") document.documentElement.lang = "fr";
+      } catch (e) { /* storage unavailable */ }
+    })();
+  </script>
 
   <!-- custom css link -->
   <link rel="stylesheet" href="./assets/css/style.css">
@@ -20,18 +52,49 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Firas Ben Khalifa",
+    "jobTitle": "Data Science & AI Engineering Student",
+    "email": "mailto:firasbenkhellifa@gmail.com",
+    "url": "https://firas191.github.io/Portfolio_Mohamed_Firas_Ben_Khalifa/",
+    "image": "https://firas191.github.io/Portfolio_Mohamed_Firas_Ben_Khalifa/Profile%20Picture.jpg",
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "École Supérieure Privée d'Ingénierie et de Technologies (ESPRIT)"
+    },
+    "knowsAbout": [
+      "Agentic AI", "Retrieval-Augmented Generation", "Large Language Models",
+      "Machine Learning", "Deep Learning", "Computer Vision", "Natural Language Processing",
+      "Python", "FastAPI", "Spring Boot", "React", "Docker"
+    ],
+    "sameAs": [
+      "https://github.com/firas191",
+      "https://www.linkedin.com/in/firasbenkhalifa/"
+    ]
+  }
+  </script>
 </head>
 
 <body>
 
+  <a class="skip-link" href="#main-content" data-en="Skip to content" data-fr="Aller au contenu">Skip to content</a>
+
   <!-- floating page controls: theme + language -->
   <div class="page-controls">
-    <button class="control-btn" data-theme-toggle title="Toggle light / dark mode">
-      <ion-icon name="moon-outline" data-theme-icon></ion-icon>
+    <button class="control-btn" type="button" data-theme-toggle
+            data-en-label="Switch to light mode" data-fr-label="Passer en mode clair"
+            aria-label="Switch to light mode">
+      <ion-icon name="moon-outline" data-theme-icon aria-hidden="true"></ion-icon>
     </button>
-    <button class="control-btn lang-toggle" data-lang-toggle title="Switch language">
+    <button class="control-btn lang-toggle" type="button" data-lang-toggle
+            data-en-label="Switch to French" data-fr-label="Passer en anglais"
+            aria-label="Switch to French">
       <span class="lang-opt active" data-lang-opt="en">EN</span>
-      <span class="lang-sep">·</span>
+      <span class="lang-sep" aria-hidden="true">·</span>
       <span class="lang-opt" data-lang-opt="fr">FR</span>
     </button>
   </div>
@@ -47,33 +110,39 @@
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="./Profile%20Picture.jpg" alt="Mohamed Firas Ben Khalifa" width="80">
+          <img src="./Profile%20Picture.jpg" alt="Firas Ben Khalifa" width="80" height="80">
         </figure>
 
         <div class="info-content">
-          <h1 class="name" title="Mohamed Firas Ben Khalifa">Mohamed Firas<br>Ben Khalifa</h1>
+          <h1 class="name" title="Firas Ben Khalifa">Firas<br>Ben Khalifa</h1>
 
-          <p class="title" data-en="Data Science &amp; AI Engineering Student" data-fr="Étudiant en Data Science &amp; Ingénierie IA">Data Science &amp; AI Engineering Student</p>
+          <p class="title" data-en="Data Science &amp; AI Engineer" data-fr="Ingénieur Data Science &amp; IA">Data Science &amp; AI Engineer</p>
         </div>
 
-        <button class="info_more-btn" data-sidebar-btn>
+        <button class="info_more-btn" type="button" data-sidebar-btn aria-expanded="false" aria-controls="sidebar-more">
           <span data-en="Show Contacts" data-fr="Voir Contacts">Show Contacts</span>
 
-          <ion-icon name="chevron-down"></ion-icon>
+          <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
         </button>
 
       </div>
 
-      <div class="sidebar-info_more">
+      <div class="sidebar-info_more" id="sidebar-more">
 
         <div class="separator"></div>
+
+        <p class="availability">
+          <span class="availability-dot" aria-hidden="true"></span>
+          <span data-en="Open to a 6-month end-of-studies internship (PFE) from January 2027"
+                data-fr="Disponible pour un stage PFE de 6 mois à partir de janvier 2027">Open to a 6-month end-of-studies internship (PFE) from January 2027</span>
+        </p>
 
         <ul class="contacts-list">
 
           <li class="contact-item">
 
             <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
+              <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
             </div>
 
             <div class="contact-info">
@@ -87,7 +156,7 @@
           <li class="contact-item">
 
             <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
+              <ion-icon name="phone-portrait-outline" aria-hidden="true"></ion-icon>
             </div>
 
             <div class="contact-info">
@@ -101,13 +170,13 @@
           <li class="contact-item">
 
             <div class="icon-box">
-              <ion-icon name="logo-github"></ion-icon>
+              <ion-icon name="logo-github" aria-hidden="true"></ion-icon>
             </div>
 
             <div class="contact-info">
               <p class="contact-title">GitHub</p>
 
-              <a href="https://github.com/firas191" target="_blank" rel="noopener" class="contact-link">github.com/firas191</a>
+              <a href="https://github.com/firas191" target="_blank" rel="noopener" class="contact-link">firas191</a>
             </div>
 
           </li>
@@ -115,13 +184,13 @@
           <li class="contact-item">
 
             <div class="icon-box">
-              <ion-icon name="logo-linkedin"></ion-icon>
+              <ion-icon name="logo-linkedin" aria-hidden="true"></ion-icon>
             </div>
 
             <div class="contact-info">
               <p class="contact-title">LinkedIn</p>
 
-              <a href="https://www.linkedin.com/in/mohamedfirasbenkhalifa" target="_blank" rel="noopener" class="contact-link">mohamedfirasbenkhalifa</a>
+              <a href="https://www.linkedin.com/in/firasbenkhalifa/" target="_blank" rel="noopener" class="contact-link">firasbenkhalifa</a>
             </div>
 
           </li>
@@ -132,14 +201,14 @@
 
         <div class="cv-btn-row">
 
-          <a href="./Curriculum_Vitae_Mohamed_Firas_Ben_Khalifa.pdf" class="cv-download-btn cv-preview-btn" target="_blank" rel="noopener">
-            <ion-icon name="eye-outline"></ion-icon>
-            <span data-en="Preview CV" data-fr="Aperçu du CV">Preview CV</span>
-          </a>
+          <button class="cv-download-btn cv-preview-btn" type="button" data-cv-open>
+            <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
+            <span data-en="View CV" data-fr="Voir le CV">View CV</span>
+          </button>
 
-          <a href="./Curriculum_Vitae_Mohamed_Firas_Ben_Khalifa.pdf" class="cv-download-btn" download="Mohamed_Firas_Ben_Khalifa_CV.pdf">
-            <ion-icon name="download-outline"></ion-icon>
-            <span data-en="Download CV" data-fr="Télécharger le CV">Download CV</span>
+          <a class="cv-download-btn" data-cv-download href="./Resume_Firas_Ben_Khalifa.pdf" download="Firas_Ben_Khalifa_Resume.pdf">
+            <ion-icon name="download-outline" aria-hidden="true"></ion-icon>
+            <span data-en="Download" data-fr="Télécharger">Download</span>
           </a>
 
         </div>
@@ -147,20 +216,20 @@
         <ul class="social-list">
 
           <li class="social-item">
-            <a href="https://github.com/firas191" target="_blank" rel="noopener" class="social-link" title="GitHub">
-              <ion-icon name="logo-github"></ion-icon>
+            <a href="https://github.com/firas191" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+              <ion-icon name="logo-github" aria-hidden="true"></ion-icon>
             </a>
           </li>
 
           <li class="social-item">
-            <a href="https://www.linkedin.com/in/mohamedfirasbenkhalifa" target="_blank" rel="noopener" class="social-link" title="LinkedIn">
-              <ion-icon name="logo-linkedin"></ion-icon>
+            <a href="https://www.linkedin.com/in/firasbenkhalifa/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+              <ion-icon name="logo-linkedin" aria-hidden="true"></ion-icon>
             </a>
           </li>
 
           <li class="social-item">
-            <a href="mailto:firasbenkhellifa@gmail.com" class="social-link" title="Email">
-              <ion-icon name="mail-outline"></ion-icon>
+            <a href="mailto:firasbenkhellifa@gmail.com" class="social-link" aria-label="Email">
+              <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
             </a>
           </li>
 
@@ -173,32 +242,32 @@
 
     <!-- #main-content -->
 
-    <div class="main-content">
+    <div class="main-content" id="main-content">
 
       <!-- #NAVBAR -->
 
-      <nav class="navbar">
+      <nav class="navbar" data-en-label="Sections" data-fr-label="Sections" aria-label="Sections">
 
         <ul class="navbar-list">
 
           <li class="navbar-item">
-            <button class="navbar-link active" data-nav-link data-nav-target="about" data-en="About" data-fr="À propos">About</button>
+            <button class="navbar-link active" type="button" data-nav-link data-nav-target="about" data-en="About" data-fr="À propos" aria-current="page">About</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link data-nav-target="resume" data-en="Resume" data-fr="Parcours">Resume</button>
+            <button class="navbar-link" type="button" data-nav-link data-nav-target="resume" data-en="Resume" data-fr="Parcours">Resume</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link data-nav-target="portfolio" data-en="Projects" data-fr="Projets">Projects</button>
+            <button class="navbar-link" type="button" data-nav-link data-nav-target="portfolio" data-en="Projects" data-fr="Projets">Projects</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link data-nav-target="certifications" data-en="Certifications" data-fr="Certifications">Certifications</button>
+            <button class="navbar-link" type="button" data-nav-link data-nav-target="certifications" data-en="Certifications" data-fr="Certifications">Certifications</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link data-nav-target="contact" data-en="Contact" data-fr="Contact">Contact</button>
+            <button class="navbar-link" type="button" data-nav-link data-nav-target="contact" data-en="Contact" data-fr="Contact">Contact</button>
           </li>
 
         </ul>
@@ -215,53 +284,18 @@
         </header>
 
         <section class="about-text">
-          <p data-en="Hi, I'm Firas — an engineering student from Tunisia with a simple obsession: taking an idea, learning whatever it takes, and turning it into something people can actually use. That mindset has carried me from my first lines of code to building intelligent applications that solve real problems, and through an internship where my work ended up in the hands of real users."
-             data-fr="Bonjour, je suis Firas — un élève-ingénieur tunisien avec une obsession simple : prendre une idée, apprendre tout ce qu'il faut, et la transformer en quelque chose que les gens peuvent réellement utiliser. Cet état d'esprit m'a mené de mes premières lignes de code à des applications intelligentes qui résolvent de vrais problèmes, en passant par un stage où mon travail a fini entre les mains de vrais utilisateurs.">
-            Hi, I'm Firas — an engineering student from Tunisia with a simple obsession: taking an idea, learning whatever it takes, and turning it into something people can actually use. That mindset has carried me from my first lines of code to building intelligent applications that solve real problems, and through an internship where my work ended up in the hands of real users.
+          <p data-en="Hi, I'm Firas — a final-year engineering student with a simple obsession: taking an idea, learning whatever it takes, and turning it into something people can actually use. That mindset took me from my first lines of code to shipping AI systems end to end — agentic pipelines, RAG, and the full-stack work that puts a model in front of a real user."
+             data-fr="Bonjour, je suis Firas — élève-ingénieur en dernière année avec une obsession simple : prendre une idée, apprendre tout ce qu'il faut, et la transformer en quelque chose que les gens peuvent réellement utiliser. Cet état d'esprit m'a mené de mes premières lignes de code à la mise en production de systèmes IA de bout en bout — pipelines agentiques, RAG, et le travail full-stack qui met un modèle entre les mains d'un utilisateur.">
+            Hi, I'm Firas — a final-year engineering student with a simple obsession: taking an idea, learning whatever it takes, and turning it into something people can actually use. That mindset took me from my first lines of code to shipping AI systems end to end — agentic pipelines, RAG, and the full-stack work that puts a model in front of a real user.
           </p>
 
-          <p data-en="I'm naturally curious: I speak four languages, love discovering new cultures, and enjoy giving back through open source. Whether I'm working solo or in a team, I bring energy, discipline and honest communication. Currently in my fourth year at ESPRIT, I'm looking for a team where I can learn fast, contribute from day one, and grow into the kind of engineer people love working with."
-             data-fr="Je suis curieux de nature : je parle quatre langues, j'adore découvrir de nouvelles cultures et je contribue à l'open source dès que je peux. Seul ou en équipe, j'apporte de l'énergie, de la rigueur et une communication honnête. Actuellement en quatrième année à ESPRIT, je cherche une équipe où apprendre vite, contribuer dès le premier jour et devenir le genre d'ingénieur avec qui on aime travailler.">
-            I'm naturally curious: I speak four languages, love discovering new cultures, and enjoy giving back through open source. Whether I'm working solo or in a team, I bring energy, discipline and honest communication. Currently in my fourth year at ESPRIT, I'm looking for a team where I can learn fast, contribute from day one, and grow into the kind of engineer people love working with.
+          <p data-en="Across two engineering internships I've built a multi-agent support platform with a hybrid ML + LLM triage pipeline, and a full-stack application running a local LLM in production. I care about the unglamorous parts too: evaluation harnesses, observability, human-validation checkpoints and Docker images that actually run. Currently looking for a six-month end-of-studies internship where I can contribute from day one."
+             data-fr="Au fil de deux stages en ingénierie, j'ai conçu une plateforme multi-agents de gestion de tickets avec triage hybride ML + LLM, et une application full-stack faisant tourner un LLM local en production. Je m'intéresse aussi aux parties ingrates : bancs d'évaluation, observabilité, points de validation humaine et images Docker qui fonctionnent vraiment. Je recherche actuellement un stage de fin d'études de six mois où contribuer dès le premier jour.">
+            Across two engineering internships I've built a multi-agent support platform with a hybrid ML + LLM triage pipeline, and a full-stack application running a local LLM in production. I care about the unglamorous parts too: evaluation harnesses, observability, human-validation checkpoints and Docker images that actually run. Currently looking for a six-month end-of-studies internship where I can contribute from day one.
           </p>
         </section>
 
-        <!-- beyond the code -->
-        <section class="highlights">
-
-          <h3 class="h3 service-title" data-en="Beyond the code" data-fr="Au-delà du code">Beyond the code</h3>
-
-          <ul class="highlights-list">
-
-            <li class="hl-item content-card">
-              <div class="hl-icon"><ion-icon name="language-outline"></ion-icon></div>
-              <h4 class="h4" data-en="4 Languages" data-fr="4 Langues">4 Languages</h4>
-              <p class="hl-text" data-en="Arabic, French, English &amp; German — and always tempted to start a fifth."
-                 data-fr="Arabe, français, anglais &amp; allemand — et toujours tenté d'en commencer une cinquième.">
-                Arabic, French, English &amp; German — and always tempted to start a fifth.</p>
-            </li>
-
-            <li class="hl-item content-card">
-              <div class="hl-icon"><ion-icon name="heart-outline"></ion-icon></div>
-              <h4 class="h4" data-en="Open Source" data-fr="Open Source">Open Source</h4>
-              <p class="hl-text" data-en="I believe in sharing what I learn and giving back to the community that taught me."
-                 data-fr="Je crois au partage de ce que j'apprends et au retour vers la communauté qui m'a formé.">
-                I believe in sharing what I learn and giving back to the community that taught me.</p>
-            </li>
-
-            <li class="hl-item content-card">
-              <div class="hl-icon"><ion-icon name="compass-outline"></ion-icon></div>
-              <h4 class="h4" data-en="Curious Explorer" data-fr="Explorateur Curieux">Curious Explorer</h4>
-              <p class="hl-text" data-en="New cultures, new places, new challenges — curiosity is my engine."
-                 data-fr="Nouvelles cultures, nouveaux horizons, nouveaux défis — la curiosité est mon moteur.">
-                New cultures, new places, new challenges — curiosity is my engine.</p>
-            </li>
-
-          </ul>
-
-        </section>
-
-        <!-- service -->
+        <!-- what I do -->
 
         <section class="service">
 
@@ -272,16 +306,16 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <ion-icon name="sparkles-outline"></ion-icon>
+                <ion-icon name="sparkles-outline" aria-hidden="true"></ion-icon>
               </div>
 
               <div class="service-content-box">
                 <h4 class="h4 service-item-title" data-en="Agentic AI &amp; LLM Applications" data-fr="IA Agentique &amp; Applications LLM">Agentic AI &amp; LLM Applications</h4>
 
                 <p class="service-item-text"
-                   data-en="RAG pipelines, multi-agent orchestration, prompt engineering and local LLM deployment."
-                   data-fr="Pipelines RAG, orchestration multi-agents, prompt engineering et déploiement de LLM locaux.">
-                  RAG pipelines, multi-agent orchestration, prompt engineering and local LLM deployment.
+                   data-en="RAG pipelines, multi-agent orchestration with LangGraph and LangChain, Text-to-SQL, prompt engineering and local LLM deployment."
+                   data-fr="Pipelines RAG, orchestration multi-agents avec LangGraph et LangChain, Text-to-SQL, prompt engineering et déploiement de LLM locaux.">
+                  RAG pipelines, multi-agent orchestration with LangGraph and LangChain, Text-to-SQL, prompt engineering and local LLM deployment.
                 </p>
               </div>
 
@@ -290,16 +324,16 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <ion-icon name="analytics-outline"></ion-icon>
+                <ion-icon name="analytics-outline" aria-hidden="true"></ion-icon>
               </div>
 
               <div class="service-content-box">
                 <h4 class="h4 service-item-title" data-en="Machine &amp; Deep Learning" data-fr="Machine &amp; Deep Learning">Machine &amp; Deep Learning</h4>
 
                 <p class="service-item-text"
-                   data-en="Model training and evaluation with PyTorch and TensorFlow — from classical ML to CNNs and transformers."
-                   data-fr="Entraînement et évaluation de modèles avec PyTorch et TensorFlow — du ML classique aux CNN et transformers.">
-                  Model training and evaluation with PyTorch and TensorFlow — from classical ML to CNNs and transformers.
+                   data-en="Model training, fine-tuning and evaluation with PyTorch and TensorFlow — from classical ML and anomaly detection to CNNs and transformers."
+                   data-fr="Entraînement, fine-tuning et évaluation de modèles avec PyTorch et TensorFlow — du ML classique et la détection d'anomalies aux CNN et transformers.">
+                  Model training, fine-tuning and evaluation with PyTorch and TensorFlow — from classical ML and anomaly detection to CNNs and transformers.
                 </p>
               </div>
 
@@ -308,16 +342,16 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <ion-icon name="eye-outline"></ion-icon>
+                <ion-icon name="eye-outline" aria-hidden="true"></ion-icon>
               </div>
 
               <div class="service-content-box">
                 <h4 class="h4 service-item-title" data-en="Computer Vision" data-fr="Vision par Ordinateur">Computer Vision</h4>
 
                 <p class="service-item-text"
-                   data-en="Real-time detection and recognition systems, including offline mobile inference on the edge."
-                   data-fr="Systèmes de détection et de reconnaissance temps réel, y compris l'inférence mobile hors ligne.">
-                  Real-time detection and recognition systems, including offline mobile inference on the edge.
+                   data-en="Real-time detection and recognition systems, including offline mobile inference on the edge with TensorFlow Lite."
+                   data-fr="Systèmes de détection et de reconnaissance temps réel, y compris l'inférence mobile hors ligne avec TensorFlow Lite.">
+                  Real-time detection and recognition systems, including offline mobile inference on the edge with TensorFlow Lite.
                 </p>
               </div>
 
@@ -326,19 +360,54 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <ion-icon name="layers-outline"></ion-icon>
+                <ion-icon name="layers-outline" aria-hidden="true"></ion-icon>
               </div>
 
               <div class="service-content-box">
                 <h4 class="h4 service-item-title" data-en="Full-Stack AI Engineering" data-fr="Ingénierie IA Full-Stack">Full-Stack AI Engineering</h4>
 
                 <p class="service-item-text"
-                   data-en="FastAPI, Spring Boot, React and Flutter apps that put models in front of real users — Dockerized and secured."
-                   data-fr="Applications FastAPI, Spring Boot, React et Flutter qui mettent les modèles entre les mains des utilisateurs — Dockerisées et sécurisées.">
-                  FastAPI, Spring Boot, React and Flutter apps that put models in front of real users — Dockerized and secured.
+                   data-en="FastAPI, Spring Boot, React, Angular and Flutter apps backed by PostgreSQL and MySQL — Dockerized, secured and shipped."
+                   data-fr="Applications FastAPI, Spring Boot, React, Angular et Flutter adossées à PostgreSQL et MySQL — Dockerisées, sécurisées et livrées.">
+                  FastAPI, Spring Boot, React, Angular and Flutter apps backed by PostgreSQL and MySQL — Dockerized, secured and shipped.
                 </p>
               </div>
 
+            </li>
+
+          </ul>
+
+        </section>
+
+        <!-- beyond the code -->
+        <section class="highlights">
+
+          <h3 class="h3 service-title" data-en="Beyond the code" data-fr="Au-delà du code">Beyond the code</h3>
+
+          <ul class="highlights-list">
+
+            <li class="hl-item content-card">
+              <div class="hl-icon"><ion-icon name="language-outline" aria-hidden="true"></ion-icon></div>
+              <h4 class="h4" data-en="Three Languages" data-fr="Trois Langues">Three Languages</h4>
+              <p class="hl-text" data-en="French and English at C1, German at B1 — and always tempted to start a fourth."
+                 data-fr="Français et anglais en C1, allemand en B1 — et toujours tenté d'en commencer une quatrième.">
+                French and English at C1, German at B1 — and always tempted to start a fourth.</p>
+            </li>
+
+            <li class="hl-item content-card">
+              <div class="hl-icon"><ion-icon name="heart-outline" aria-hidden="true"></ion-icon></div>
+              <h4 class="h4" data-en="Open Source" data-fr="Open Source">Open Source</h4>
+              <p class="hl-text" data-en="I believe in sharing what I learn and giving back to the community that taught me."
+                 data-fr="Je crois au partage de ce que j'apprends et au retour vers la communauté qui m'a formé.">
+                I believe in sharing what I learn and giving back to the community that taught me.</p>
+            </li>
+
+            <li class="hl-item content-card">
+              <div class="hl-icon"><ion-icon name="compass-outline" aria-hidden="true"></ion-icon></div>
+              <h4 class="h4" data-en="Curious Explorer" data-fr="Explorateur Curieux">Curious Explorer</h4>
+              <p class="hl-text" data-en="New cultures, new places, new challenges — curiosity is my engine."
+                 data-fr="Nouvelles cultures, nouveaux horizons, nouveaux défis — la curiosité est mon moteur.">
+                New cultures, new places, new challenges — curiosity is my engine.</p>
             </li>
 
           </ul>
@@ -360,7 +429,7 @@
 
           <div class="title-wrapper">
             <div class="icon-box">
-              <ion-icon name="briefcase-outline"></ion-icon>
+              <ion-icon name="briefcase-outline" aria-hidden="true"></ion-icon>
             </div>
 
             <h3 class="h3" data-en="Experience" data-fr="Expérience">Experience</h3>
@@ -371,22 +440,51 @@
             <li class="timeline-item">
 
               <h4 class="h4 timeline-item-title"
+                  data-en="Full-Stack AI Engineering Intern — Proxym"
+                  data-fr="Stagiaire Full-Stack AI Engineer — Proxym">Full-Stack AI Engineering Intern — Proxym</h4>
+
+              <span data-en="2026 · 8 weeks" data-fr="2026 · 8 semaines">2026 · 8 weeks</span>
+
+              <ul class="timeline-bullets">
+                <li data-en="Designed a multi-agent support ticket platform (Angular, Spring Boot, PostgreSQL, FastAPI) with a hybrid ML + LLM triage pipeline routed by confidence score."
+                    data-fr="Conçu une plateforme multi-agents de gestion de tickets support (Angular, Spring Boot, PostgreSQL, FastAPI) avec un triage hybride ML + LLM routé par score de confiance.">
+                  Designed a multi-agent support ticket platform (Angular, Spring Boot, PostgreSQL, FastAPI) with a hybrid ML + LLM triage pipeline routed by confidence score.</li>
+                <li data-en="Architected asynchronous ticket ingestion over a message queue for high-volume imports, with vector search for duplicate detection and similarity matching."
+                    data-fr="Architecturé l'ingestion asynchrone des tickets via une file de messages pour les imports à haut volume, avec recherche vectorielle pour la détection de doublons.">
+                  Architected asynchronous ticket ingestion over a message queue for high-volume imports, with vector search for duplicate detection and similarity matching.</li>
+                <li data-en="Built a RAG resolution agent drafting cited response suggestions behind mandatory human validation, plus a secured Text-to-SQL agent restricted to read-only views with strict query validation."
+                    data-fr="Développé un agent de résolution RAG proposant des réponses sourcées avec validation humaine obligatoire, ainsi qu'un agent Text-to-SQL sécurisé restreint à des vues en lecture seule avec validation stricte des requêtes.">
+                  Built a RAG resolution agent drafting cited response suggestions behind mandatory human validation, plus a secured Text-to-SQL agent restricted to read-only views with strict query validation.</li>
+                <li data-en="Set up LLM observability and an evaluation harness tracking precision, recall and retrieval quality."
+                    data-fr="Mis en place l'observabilité LLM et un banc d'évaluation suivant précision, rappel et qualité de la recherche.">
+                  Set up LLM observability and an evaluation harness tracking precision, recall and retrieval quality.</li>
+              </ul>
+
+              <p class="timeline-tech">RAG · LangGraph · Text-to-SQL · FastAPI · pgvector · RabbitMQ · PostgreSQL · Spring Boot · Angular · Docker</p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title"
                   data-en="AI &amp; Software Engineering Intern — Whitecape Technologies"
                   data-fr="Stagiaire Ingénierie IA &amp; Logiciel — Whitecape Technologies">AI &amp; Software Engineering Intern — Whitecape Technologies</h4>
 
-              <span data-en="2025 · Sousse, Tunisia · 6 weeks" data-fr="2025 · Sousse, Tunisie · 6 semaines">2025 · Sousse, Tunisia · 6 weeks</span>
+              <span data-en="2025 · 6 weeks" data-fr="2025 · 6 semaines">2025 · 6 weeks</span>
 
               <ul class="timeline-bullets">
-                <li data-en="Built a full-stack smart note-taking web app (Spring Boot, React, MySQL) with a REST API."
+                <li data-en="Built a full-stack intelligent notepad web application (Spring Boot, React, MySQL) with a REST API for data management."
                     data-fr="Développé une application web full-stack de bloc-notes intelligent (Spring Boot, React, MySQL) avec API REST.">
-                  Built a full-stack smart note-taking web app (Spring Boot, React, MySQL) with a REST API.</li>
+                  Built a full-stack intelligent notepad web application (Spring Boot, React, MySQL) with a REST API for data management.</li>
                 <li data-en="Deployed a local LLM (TinyLlama via Flask) for automatic content suggestions — cutting users' writing time by 70%."
                     data-fr="Déployé un LLM local (TinyLlama via Flask) pour la suggestion automatique de contenu — réduisant le temps de rédaction de 70%.">
                   Deployed a local LLM (TinyLlama via Flask) for automatic content suggestions — cutting users' writing time by 70%.</li>
-                <li data-en="Containerized the app with Docker, added Google &amp; GitHub OAuth, and automated email + SMS notifications."
+                <li data-en="Containerized the application with Docker, added Google &amp; GitHub OAuth, and automated email + SMS notifications."
                     data-fr="Conteneurisé l'application avec Docker, ajouté l'OAuth Google &amp; GitHub et automatisé les notifications email + SMS.">
-                  Containerized the app with Docker, added Google &amp; GitHub OAuth, and automated email + SMS notifications.</li>
+                  Containerized the application with Docker, added Google &amp; GitHub OAuth, and automated email + SMS notifications.</li>
               </ul>
+
+              <p class="timeline-tech">Spring Boot · React · MySQL · REST API · OAuth · Docker · Flask · TinyLlama</p>
 
             </li>
 
@@ -398,7 +496,7 @@
 
           <div class="title-wrapper">
             <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
+              <ion-icon name="book-outline" aria-hidden="true"></ion-icon>
             </div>
 
             <h3 class="h3" data-en="Education" data-fr="Éducation">Education</h3>
@@ -409,16 +507,26 @@
             <li class="timeline-item">
 
               <h4 class="h4 timeline-item-title"
-                  data-en="Engineering Degree in Computer Science — Data Science Track"
-                  data-fr="Cycle Ingénieur en Informatique — Spécialité Data Science">Engineering Degree in Computer Science — Data Science Track</h4>
+                  data-en="Engineering Degree in Computer Science — Data Science &amp; AI"
+                  data-fr="Cycle Ingénieur en Informatique — Data Science &amp; IA">Engineering Degree in Computer Science — Data Science &amp; AI</h4>
 
-              <span data-en="2022 — Present · ESPRIT, Ariana, Tunisia" data-fr="2022 — Présent · ESPRIT, Ariana, Tunisie">2022 — Present · ESPRIT, Ariana, Tunisia</span>
+              <span data-en="2024 — Present · ESPRIT" data-fr="2024 — Présent · ESPRIT">2024 — Present · ESPRIT</span>
 
               <p class="timeline-text"
-                 data-en="2nd year of the engineering cycle (4th year overall, Bac+4), specializing in Data Science and Artificial Intelligence."
-                 data-fr="2ème année du cycle ingénieur (Bac+4), spécialité Data Science et Intelligence Artificielle.">
-                2nd year of the engineering cycle (4th year overall, Bac+4), specializing in Data Science and Artificial Intelligence.
+                 data-en="Final year of the engineering cycle (Bac+5), specializing in Data Science and Artificial Intelligence. Graduating July 2027."
+                 data-fr="Dernière année du cycle ingénieur (Bac+5), spécialité Data Science et Intelligence Artificielle. Diplôme prévu en juillet 2027.">
+                Final year of the engineering cycle (Bac+5), specializing in Data Science and Artificial Intelligence. Graduating July 2027.
               </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title"
+                  data-en="Integrated Preparatory Cycle — Mathematics &amp; Computer Science"
+                  data-fr="Cycle Préparatoire Intégré — Mathématiques &amp; Informatique">Integrated Preparatory Cycle — Mathematics &amp; Computer Science</h4>
+
+              <span data-en="2022 — 2024 · ESPRIT" data-fr="2022 — 2024 · ESPRIT">2022 — 2024 · ESPRIT</span>
 
             </li>
 
@@ -428,7 +536,7 @@
                   data-en="Baccalaureate in Technical Sciences"
                   data-fr="Baccalauréat Sciences Techniques">Baccalaureate in Technical Sciences</h4>
 
-              <span data-en="2022 · Lycée Les Elites, Sousse, Tunisia" data-fr="2022 · Lycée Les Elites, Sousse, Tunisie">2022 · Lycée Les Elites, Sousse, Tunisia</span>
+              <span data-en="2022 · Lycée Les Elites" data-fr="2022 · Lycée Les Elites">2022 · Lycée Les Elites</span>
 
             </li>
 
@@ -449,39 +557,45 @@
                 <li class="chip">RAG</li>
                 <li class="chip">LLMs</li>
                 <li class="chip">Prompt Engineering</li>
+                <li class="chip">Fine-tuning</li>
                 <li class="chip">Computer Vision</li>
                 <li class="chip">NLP</li>
                 <li class="chip">Deep Learning</li>
                 <li class="chip">Machine Learning</li>
+                <li class="chip">Anomaly Detection</li>
               </ul>
             </div>
 
             <div class="chip-group">
-              <h5 class="h5 chip-group-title" data-en="Frameworks" data-fr="Frameworks">Frameworks</h5>
+              <h5 class="h5 chip-group-title" data-en="Frameworks &amp; Libraries" data-fr="Frameworks &amp; Bibliothèques">Frameworks &amp; Libraries</h5>
               <ul class="chip-list">
                 <li class="chip">PyTorch</li>
                 <li class="chip">TensorFlow / TF Lite</li>
-                <li class="chip">HuggingFace</li>
+                <li class="chip">HuggingFace Transformers</li>
                 <li class="chip">LangChain</li>
+                <li class="chip">LangGraph</li>
                 <li class="chip">scikit-learn</li>
                 <li class="chip">FastAPI</li>
                 <li class="chip">Spring Boot</li>
                 <li class="chip">React</li>
+                <li class="chip">Angular</li>
                 <li class="chip">Flutter</li>
               </ul>
             </div>
 
             <div class="chip-group">
-              <h5 class="h5 chip-group-title" data-en="Programming Languages" data-fr="Langages">Programming Languages</h5>
+              <h5 class="h5 chip-group-title" data-en="Programming Languages" data-fr="Langages de programmation">Programming Languages</h5>
               <ul class="chip-list">
                 <li class="chip">Python</li>
-                <li class="chip">R</li>
-                <li class="chip">SQL / PL-SQL</li>
                 <li class="chip">Java</li>
+                <li class="chip">SQL / PL-SQL</li>
+                <li class="chip">JavaScript</li>
+                <li class="chip">TypeScript</li>
+                <li class="chip">R</li>
                 <li class="chip">C / C++</li>
                 <li class="chip">C#</li>
-                <li class="chip">JavaScript</li>
                 <li class="chip">PHP</li>
+                <li class="chip">HTML / CSS</li>
               </ul>
             </div>
 
@@ -492,7 +606,10 @@
                 <li class="chip">Git / GitHub</li>
                 <li class="chip">REST APIs</li>
                 <li class="chip">OAuth</li>
+                <li class="chip">RabbitMQ</li>
+                <li class="chip">LLM Observability</li>
                 <li class="chip">Jupyter / Colab</li>
+                <li class="chip">PostgreSQL / pgvector</li>
                 <li class="chip">MySQL</li>
                 <li class="chip">MongoDB</li>
                 <li class="chip">SQL Server</li>
@@ -500,9 +617,8 @@
             </div>
 
             <div class="chip-group">
-              <h5 class="h5 chip-group-title" data-en="Spoken Languages" data-fr="Langues">Spoken Languages</h5>
+              <h5 class="h5 chip-group-title" data-en="Spoken Languages" data-fr="Langues parlées">Spoken Languages</h5>
               <ul class="chip-list">
-                <li class="chip" data-en="Arabic (native)" data-fr="Arabe (natif)">Arabic (native)</li>
                 <li class="chip" data-en="French (C1)" data-fr="Français (C1)">French (C1)</li>
                 <li class="chip" data-en="English (C1)" data-fr="Anglais (C1)">English (C1)</li>
                 <li class="chip" data-en="German (B1)" data-fr="Allemand (B1)">German (B1)</li>
@@ -529,35 +645,35 @@
           <ul class="filter-list">
 
             <li class="filter-item">
-              <button class="active" data-filter-btn data-filter-value="all" data-en="All" data-fr="Tous">All</button>
+              <button class="active" type="button" data-filter-btn data-filter-value="all" data-en="All" data-fr="Tous">All</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn data-filter-value="agentic-ai" data-en="Agentic AI" data-fr="IA Agentique">Agentic AI</button>
+              <button type="button" data-filter-btn data-filter-value="agentic-ai" data-en="Agentic AI" data-fr="IA Agentique">Agentic AI</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn data-filter-value="computer-vision" data-en="Computer Vision" data-fr="Vision par Ordinateur">Computer Vision</button>
+              <button type="button" data-filter-btn data-filter-value="computer-vision" data-en="Computer Vision" data-fr="Vision par Ordinateur">Computer Vision</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn data-filter-value="machine-learning" data-en="Machine Learning" data-fr="Machine Learning">Machine Learning</button>
+              <button type="button" data-filter-btn data-filter-value="machine-learning" data-en="Machine Learning" data-fr="Machine Learning">Machine Learning</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn data-filter-value="full-stack" data-en="Full-Stack" data-fr="Full-Stack">Full-Stack</button>
+              <button type="button" data-filter-btn data-filter-value="full-stack" data-en="Full-Stack" data-fr="Full-Stack">Full-Stack</button>
             </li>
 
           </ul>
 
           <div class="filter-select-box">
 
-            <button class="filter-select" data-select>
+            <button class="filter-select" type="button" data-select aria-expanded="false">
 
-              <div class="select-value" data-selecct-value data-en="Select category" data-fr="Choisir une catégorie">Select category</div>
+              <div class="select-value" data-select-value data-en="Select category" data-fr="Choisir une catégorie">Select category</div>
 
               <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
+                <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
               </div>
 
             </button>
@@ -565,23 +681,23 @@
             <ul class="select-list">
 
               <li class="select-item">
-                <button data-select-item data-filter-value="all" data-en="All" data-fr="Tous">All</button>
+                <button type="button" data-select-item data-filter-value="all" data-en="All" data-fr="Tous">All</button>
               </li>
 
               <li class="select-item">
-                <button data-select-item data-filter-value="agentic-ai" data-en="Agentic AI" data-fr="IA Agentique">Agentic AI</button>
+                <button type="button" data-select-item data-filter-value="agentic-ai" data-en="Agentic AI" data-fr="IA Agentique">Agentic AI</button>
               </li>
 
               <li class="select-item">
-                <button data-select-item data-filter-value="computer-vision" data-en="Computer Vision" data-fr="Vision par Ordinateur">Computer Vision</button>
+                <button type="button" data-select-item data-filter-value="computer-vision" data-en="Computer Vision" data-fr="Vision par Ordinateur">Computer Vision</button>
               </li>
 
               <li class="select-item">
-                <button data-select-item data-filter-value="machine-learning" data-en="Machine Learning" data-fr="Machine Learning">Machine Learning</button>
+                <button type="button" data-select-item data-filter-value="machine-learning" data-en="Machine Learning" data-fr="Machine Learning">Machine Learning</button>
               </li>
 
               <li class="select-item">
-                <button data-select-item data-filter-value="full-stack" data-en="Full-Stack" data-fr="Full-Stack">Full-Stack</button>
+                <button type="button" data-select-item data-filter-value="full-stack" data-en="Full-Stack" data-fr="Full-Stack">Full-Stack</button>
               </li>
 
             </ul>
@@ -590,13 +706,13 @@
 
           <ul class="project-list">
 
-            <!-- 1. SkillBridge AI (CV order) -->
+            <!-- 1. SkillBridge AI -->
             <li class="project-item active" data-filter-item data-category="agentic-ai">
               <a href="https://github.com/firas191/SkillBridge-AI" target="_blank" rel="noopener">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
-                    <ion-icon name="logo-github"></ion-icon>
+                    <ion-icon name="logo-github" aria-hidden="true"></ion-icon>
                   </div>
 
                   <img src="./assets/images/project-skillbridge.svg" alt="SkillBridge AI" loading="lazy">
@@ -604,7 +720,7 @@
 
                 <h3 class="project-title">SkillBridge AI</h3>
 
-                <p class="project-category" data-en="Agentic AI · Recruitment copilot" data-fr="IA Agentique · Copilot de recrutement">Agentic AI · Recruitment copilot</p>
+                <p class="project-category" data-en="Agentic AI · Recruitment copilot" data-fr="IA Agentique · Copilote de recrutement">Agentic AI · Recruitment copilot</p>
 
                 <p class="project-desc"
                    data-en="Extracts skills from CVs, computes explainable job-match scores and generates personalized learning paths — plus an HR agent with salary benchmarks and a rubric-scored interview simulator."
@@ -612,16 +728,18 @@
                   Extracts skills from CVs, computes explainable job-match scores and generates personalized learning paths — plus an HR agent with salary benchmarks and a rubric-scored interview simulator.
                 </p>
 
+                <p class="project-stack">Python · FastAPI · React · TypeScript · LangChain · LLMs</p>
+
               </a>
             </li>
 
-            <!-- 2. AIGIS (CV order, private) -->
+            <!-- 2. AIGIS (private) -->
             <li class="project-item active" data-filter-item data-category="computer-vision">
-              <a class="project-private">
+              <div class="project-private">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
-                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <ion-icon name="lock-closed-outline" aria-hidden="true"></ion-icon>
                   </div>
 
                   <img src="./assets/images/project-aigis.svg" alt="AIGIS" loading="lazy">
@@ -637,16 +755,18 @@
                   Multimodal AI assistant for structural diagnosis: a trained CNN detects cracks &amp; corrosion in real time, paired with a full RAG pipeline that auto-generates diagnostic reports. Deployed full-stack (FastAPI/React) in production.
                 </p>
 
-              </a>
+                <p class="project-stack">Python · CNN · FastAPI · React · RAG · HuggingFace · Docker</p>
+
+              </div>
             </li>
 
-            <!-- 3. AgriSmart (CV order, private) -->
+            <!-- 3. AgriSmart (private) -->
             <li class="project-item active" data-filter-item data-category="full-stack">
-              <a class="project-private">
+              <div class="project-private">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
-                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <ion-icon name="lock-closed-outline" aria-hidden="true"></ion-icon>
                   </div>
 
                   <img src="./assets/images/project-agrismart.svg" alt="AgriSmart" loading="lazy">
@@ -662,7 +782,9 @@
                   Mobile-first farming platform: LangChain-orchestrated agents automate irrigation recommendations, offline plant &amp; livestock disease detection (PyTorch / TF Lite), NDVI satellite analytics, VRA mapping and GPS herd tracking.
                 </p>
 
-              </a>
+                <p class="project-stack">Flutter · FastAPI · PyTorch · TensorFlow Lite · LangChain · GPS</p>
+
+              </div>
             </li>
 
             <!-- 4. FraudShield -->
@@ -671,7 +793,7 @@
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
-                    <ion-icon name="logo-github"></ion-icon>
+                    <ion-icon name="logo-github" aria-hidden="true"></ion-icon>
                   </div>
 
                   <img src="./assets/images/project-fraudshield.svg" alt="FraudShield" loading="lazy">
@@ -687,6 +809,8 @@
                   Federated learning platform for cross-bank fraud detection with differential privacy: three institutions co-train a fraud detector while raw transaction data never leaves each bank — only DP-noised model updates are shared.
                 </p>
 
+                <p class="project-stack">Python · Federated Learning · Differential Privacy · scikit-learn</p>
+
               </a>
             </li>
 
@@ -696,7 +820,7 @@
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
-                    <ion-icon name="logo-github"></ion-icon>
+                    <ion-icon name="logo-github" aria-hidden="true"></ion-icon>
                   </div>
 
                   <img src="./assets/images/project-insightflow.svg" alt="InsightFlow AI" loading="lazy">
@@ -712,6 +836,8 @@
                   Enterprise Pulse Agent: a fine-tuned multi-task transformer (category, intent, sentiment) turns scattered support tickets into a daily business pulse — semantic retrieval of similar cases, summarized pain points, drafted replies and human-review checkpoints.
                 </p>
 
+                <p class="project-stack">Python · HuggingFace Transformers · Semantic Search · LLMs</p>
+
               </a>
             </li>
 
@@ -721,7 +847,7 @@
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
-                    <ion-icon name="logo-github"></ion-icon>
+                    <ion-icon name="logo-github" aria-hidden="true"></ion-icon>
                   </div>
 
                   <img src="./assets/images/project-minidevin.svg" alt="Mini-Devin" loading="lazy">
@@ -737,6 +863,8 @@
                   Autonomous software-engineering agent: GitHub issue in, validated patch out. A LangGraph pipeline maps the codebase (AST), locates faulty files (BM25 + LLM), plans a minimal fix, applies precise edits and retries via a critic agent until tests pass — evaluated on SWE-bench Lite.
                 </p>
 
+                <p class="project-stack">Python · LangGraph · AST analysis · BM25 · SWE-bench Lite</p>
+
               </a>
             </li>
 
@@ -746,7 +874,7 @@
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
-                    <ion-icon name="logo-github"></ion-icon>
+                    <ion-icon name="logo-github" aria-hidden="true"></ion-icon>
                   </div>
 
                   <img src="./assets/images/project-emotion.svg" alt="Face Emotion Recognition" loading="lazy">
@@ -761,6 +889,8 @@
                    data-fr="Reconnaissance faciale des émotions en temps réel — EfficientNet-B3 entraîné sur RAF-DB (87,6% de précision) avec détection de visage OpenCV, test-time augmentation, captioning BLIP, sortie vocale et analytique de session.">
                   Real-time facial emotion recognition — EfficientNet-B3 trained on RAF-DB (87.6% test accuracy) with OpenCV face detection, test-time augmentation, BLIP scene captioning, voice output and session analytics.
                 </p>
+
+                <p class="project-stack">PyTorch · EfficientNet-B3 · OpenCV · BLIP</p>
 
               </a>
             </li>
@@ -781,9 +911,9 @@
         </header>
 
         <p class="cert-intro"
-           data-en="Seven certifications from the NVIDIA Deep Learning Institute, covering the modern LLM engineering stack — from deep learning fundamentals to production agentic applications. Click any card to verify the certificate."
-           data-fr="Sept certifications du NVIDIA Deep Learning Institute, couvrant la stack moderne d'ingénierie LLM — des fondamentaux du deep learning aux applications agentiques en production. Cliquez sur une carte pour vérifier le certificat.">
-          Seven certifications from the NVIDIA Deep Learning Institute, covering the modern LLM engineering stack — from deep learning fundamentals to production agentic applications. Click any card to verify the certificate.
+           data-en="Eight certifications from the NVIDIA Deep Learning Institute, covering the modern LLM engineering stack — from deep learning fundamentals to production agentic applications. Click any card to open its official verification page."
+           data-fr="Huit certifications du NVIDIA Deep Learning Institute, couvrant la stack moderne d'ingénierie LLM — des fondamentaux du deep learning aux applications agentiques en production. Cliquez sur une carte pour ouvrir sa page de vérification officielle.">
+          Eight certifications from the NVIDIA Deep Learning Institute, covering the modern LLM engineering stack — from deep learning fundamentals to production agentic applications. Click any card to open its official verification page.
         </p>
 
         <section class="cert-section">
@@ -792,78 +922,89 @@
 
             <li>
               <a class="cert-item content-card" href="https://learn.nvidia.com/certificates?id=uXlGCuFbT1Gt35rqy6RsgQ" target="_blank" rel="noopener">
-                <div class="cert-icon"><ion-icon name="ribbon-outline"></ion-icon></div>
+                <div class="cert-icon"><ion-icon name="ribbon-outline" aria-hidden="true"></ion-icon></div>
                 <div class="cert-body">
                   <h4 class="h4">Building Agentic AI Applications with Large Language Models</h4>
                   <p class="cert-issuer">NVIDIA Deep Learning Institute</p>
                 </div>
-                <ion-icon class="cert-open" name="open-outline"></ion-icon>
+                <ion-icon class="cert-open" name="open-outline" aria-hidden="true"></ion-icon>
               </a>
             </li>
 
             <li>
               <a class="cert-item content-card" href="https://learn.nvidia.com/certificates?id=8TyUxnT_QgGI4gmYYP8I-g" target="_blank" rel="noopener">
-                <div class="cert-icon"><ion-icon name="ribbon-outline"></ion-icon></div>
+                <div class="cert-icon"><ion-icon name="ribbon-outline" aria-hidden="true"></ion-icon></div>
                 <div class="cert-body">
                   <h4 class="h4">Building RAG Agents with LLMs</h4>
                   <p class="cert-issuer">NVIDIA Deep Learning Institute</p>
                 </div>
-                <ion-icon class="cert-open" name="open-outline"></ion-icon>
+                <ion-icon class="cert-open" name="open-outline" aria-hidden="true"></ion-icon>
               </a>
             </li>
 
             <li>
               <a class="cert-item content-card" href="https://learn.nvidia.com/certificates?id=IikyISctSbCZF19omk-s-A" target="_blank" rel="noopener">
-                <div class="cert-icon"><ion-icon name="ribbon-outline"></ion-icon></div>
+                <div class="cert-icon"><ion-icon name="ribbon-outline" aria-hidden="true"></ion-icon></div>
                 <div class="cert-body">
                   <h4 class="h4">Rapid Application Development with Large Language Models (LLMs)</h4>
                   <p class="cert-issuer">NVIDIA Deep Learning Institute</p>
                 </div>
-                <ion-icon class="cert-open" name="open-outline"></ion-icon>
+                <ion-icon class="cert-open" name="open-outline" aria-hidden="true"></ion-icon>
               </a>
             </li>
 
             <li>
               <a class="cert-item content-card" href="https://learn.nvidia.com/certificates?id=53JHmdxKROGdgS-a7xZ4FQ" target="_blank" rel="noopener">
-                <div class="cert-icon"><ion-icon name="ribbon-outline"></ion-icon></div>
+                <div class="cert-icon"><ion-icon name="ribbon-outline" aria-hidden="true"></ion-icon></div>
                 <div class="cert-body">
                   <h4 class="h4">Building LLM Applications With Prompt Engineering</h4>
                   <p class="cert-issuer">NVIDIA Deep Learning Institute</p>
                 </div>
-                <ion-icon class="cert-open" name="open-outline"></ion-icon>
+                <ion-icon class="cert-open" name="open-outline" aria-hidden="true"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a class="cert-item content-card" href="https://learn.nvidia.com/certificates?id=neW6-d-YS--nrKknMR_6dA" target="_blank" rel="noopener">
+                <div class="cert-icon"><ion-icon name="ribbon-outline" aria-hidden="true"></ion-icon></div>
+                <div class="cert-body">
+                  <h4 class="h4">Evaluation and Light Customization of LLMs</h4>
+                  <p class="cert-issuer">NVIDIA Deep Learning Institute</p>
+                </div>
+                <ion-icon class="cert-open" name="open-outline" aria-hidden="true"></ion-icon>
               </a>
             </li>
 
             <li>
               <a class="cert-item content-card" href="https://learn.nvidia.com/certificates?id=GrJ7usTdRCmZRhEWz7gkcQ" target="_blank" rel="noopener">
-                <div class="cert-icon"><ion-icon name="ribbon-outline"></ion-icon></div>
+                <div class="cert-icon"><ion-icon name="ribbon-outline" aria-hidden="true"></ion-icon></div>
                 <div class="cert-body">
                   <h4 class="h4">Introduction to Transformer-Based Natural Language Processing</h4>
                   <p class="cert-issuer">NVIDIA Deep Learning Institute</p>
                 </div>
-                <ion-icon class="cert-open" name="open-outline"></ion-icon>
+                <ion-icon class="cert-open" name="open-outline" aria-hidden="true"></ion-icon>
               </a>
             </li>
 
             <li>
               <a class="cert-item content-card" href="https://learn.nvidia.com/certificates?id=-bUEio_gR0KB5efH0IbdKg" target="_blank" rel="noopener">
-                <div class="cert-icon"><ion-icon name="ribbon-outline"></ion-icon></div>
+                <div class="cert-icon"><ion-icon name="ribbon-outline" aria-hidden="true"></ion-icon></div>
                 <div class="cert-body">
                   <h4 class="h4">Applications of AI for Anomaly Detection</h4>
                   <p class="cert-issuer">NVIDIA Deep Learning Institute</p>
                 </div>
-                <ion-icon class="cert-open" name="open-outline"></ion-icon>
+                <ion-icon class="cert-open" name="open-outline" aria-hidden="true"></ion-icon>
               </a>
             </li>
 
             <li>
               <a class="cert-item content-card" href="https://learn.nvidia.com/certificates?id=QrCHNAPDQ22AcTapTRa6gg" target="_blank" rel="noopener">
-                <div class="cert-icon"><ion-icon name="ribbon-outline"></ion-icon></div>
+                <div class="cert-icon"><ion-icon name="ribbon-outline" aria-hidden="true"></ion-icon></div>
                 <div class="cert-body">
                   <h4 class="h4">Fundamentals of Deep Learning</h4>
                   <p class="cert-issuer">NVIDIA Deep Learning Institute</p>
                 </div>
-                <ion-icon class="cert-open" name="open-outline"></ion-icon>
+                <ion-icon class="cert-open" name="open-outline" aria-hidden="true"></ion-icon>
               </a>
             </li>
 
@@ -883,32 +1024,56 @@
         </header>
 
         <p class="contact-intro"
-           data-en="Open to AI/ML internships, end-of-studies projects (PFE) and junior opportunities — on-site in Tunisia or remote. I usually reply within 24 hours."
-           data-fr="Ouvert aux stages IA/ML, projets de fin d'études (PFE) et opportunités junior — sur site en Tunisie ou à distance. Je réponds généralement sous 24h.">
-          Open to AI/ML internships, end-of-studies projects (PFE) and junior opportunities — on-site in Tunisia or remote. I usually reply within 24 hours.
+           data-en="I'm looking for a six-month end-of-studies internship (PFE) in Data Science / AI starting January 2027 — remote or on-site, relocation welcome. I also read every message about junior AI/ML roles. I usually reply within 24 hours."
+           data-fr="Je recherche un stage de fin d'études (PFE) de six mois en Data Science / IA à partir de janvier 2027 — à distance ou sur site, mobilité bienvenue. Je lis également chaque message concernant des postes junior en IA/ML. Je réponds généralement sous 24 heures.">
+          I'm looking for a six-month end-of-studies internship (PFE) in Data Science / AI starting January 2027 — remote or on-site, relocation welcome. I also read every message about junior AI/ML roles. I usually reply within 24 hours.
         </p>
+
+        <div class="contact-quick">
+          <a class="quick-btn" href="mailto:firasbenkhellifa@gmail.com">
+            <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+            <span>firasbenkhellifa@gmail.com</span>
+          </a>
+          <button class="quick-btn" type="button" data-cv-open>
+            <ion-icon name="document-text-outline" aria-hidden="true"></ion-icon>
+            <span data-en="View CV" data-fr="Voir le CV">View CV</span>
+          </button>
+          <a class="quick-btn" href="https://www.linkedin.com/in/firasbenkhalifa/" target="_blank" rel="noopener">
+            <ion-icon name="logo-linkedin" aria-hidden="true"></ion-icon>
+            <span>LinkedIn</span>
+          </a>
+        </div>
 
         <section class="contact-form">
 
           <h3 class="h3 form-title" data-en="Send me a message" data-fr="Envoyez-moi un message">Send me a message</h3>
 
-          <form action="#" class="form" data-form>
+          <form action="#" class="form" data-form novalidate>
 
             <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input
-                     data-en-ph="Full name" data-fr-ph="Nom complet">
+              <label class="sr-only" for="fullname" data-en="Full name" data-fr="Nom complet">Full name</label>
+              <input type="text" id="fullname" name="fullname" class="form-input" placeholder="Full name" required data-form-input
+                     data-en-ph="Full name" data-fr-ph="Nom complet" autocomplete="name">
 
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input
-                     data-en-ph="Email address" data-fr-ph="Adresse email">
+              <label class="sr-only" for="email" data-en="Email address" data-fr="Adresse email">Email address</label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="Email address" required data-form-input
+                     data-en-ph="Email address" data-fr-ph="Adresse email" autocomplete="email">
             </div>
 
-            <textarea name="message" class="form-input" placeholder="Your message" required data-form-input
+            <label class="sr-only" for="message" data-en="Your message" data-fr="Votre message">Your message</label>
+            <textarea id="message" name="message" class="form-input" placeholder="Your message" required data-form-input
                       data-en-ph="Your message" data-fr-ph="Votre message"></textarea>
 
             <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
+              <ion-icon name="paper-plane" aria-hidden="true"></ion-icon>
               <span data-en="Send Message" data-fr="Envoyer">Send Message</span>
             </button>
+
+            <p class="form-note" role="status" data-form-note
+               data-en="This opens your email client with the message ready to send."
+               data-fr="Ceci ouvre votre client email avec le message prêt à envoyer.">
+              This opens your email client with the message ready to send.
+            </p>
 
           </form>
 
@@ -916,13 +1081,73 @@
 
       </article>
 
+      <footer class="site-footer">
+        <p>&copy; <span data-year>2026</span> Firas Ben Khalifa</p>
+        <p data-en="Hand-built with plain HTML, CSS and JavaScript." data-fr="Fait main en HTML, CSS et JavaScript.">Hand-built with plain HTML, CSS and JavaScript.</p>
+      </footer>
+
     </div>
 
   </main>
 
 
+  <!-- #CV PREVIEW MODAL -->
+
+  <div class="cv-modal" data-cv-modal hidden>
+
+    <div class="cv-modal-overlay" data-cv-close></div>
+
+    <div class="cv-modal-box" role="dialog" aria-modal="true" aria-labelledby="cv-modal-title">
+
+      <header class="cv-modal-head">
+
+        <div class="cv-modal-heading">
+          <h2 class="h3" id="cv-modal-title" data-en="Curriculum Vitae" data-fr="Curriculum Vitae">Curriculum Vitae</h2>
+          <p class="cv-modal-lang" data-cv-lang-label>English version</p>
+        </div>
+
+        <div class="cv-modal-actions">
+
+          <div class="cv-lang-switch" role="group" data-en-label="CV language" data-fr-label="Langue du CV" aria-label="CV language">
+            <button type="button" class="cv-lang-btn active" data-cv-lang="en">EN</button>
+            <button type="button" class="cv-lang-btn" data-cv-lang="fr">FR</button>
+          </div>
+
+          <a class="cv-modal-btn" data-cv-download-modal href="./Resume_Firas_Ben_Khalifa.pdf" download="Firas_Ben_Khalifa_Resume.pdf">
+            <ion-icon name="download-outline" aria-hidden="true"></ion-icon>
+            <span data-en="Download" data-fr="Télécharger">Download</span>
+          </a>
+
+          <a class="cv-modal-btn" data-cv-newtab href="./Resume_Firas_Ben_Khalifa.pdf" target="_blank" rel="noopener">
+            <ion-icon name="open-outline" aria-hidden="true"></ion-icon>
+            <span data-en="Open" data-fr="Ouvrir">Open</span>
+          </a>
+
+          <button class="cv-modal-close" type="button" data-cv-close
+                  data-en-label="Close" data-fr-label="Fermer" aria-label="Close">
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+
+        </div>
+
+      </header>
+
+      <div class="cv-modal-body">
+        <iframe data-cv-frame title="CV preview" src="about:blank"></iframe>
+        <p class="cv-modal-fallback"
+           data-en="Preview not available on this device — use Open or Download above."
+           data-fr="Aperçu indisponible sur cet appareil — utilisez Ouvrir ou Télécharger ci-dessus.">
+          Preview not available on this device — use Open or Download above.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+
   <!-- custom js link -->
-  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/script.js" defer></script>
 
   <!-- ionicon link -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
